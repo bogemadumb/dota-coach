@@ -1,0 +1,315 @@
+# Item constraints for patch 7.41f. Keys are KB item keys (data/kb/items/<key>.json).
+# Sources: mechanics_a.md / mechanics_b.md (section in `src`) and the official item texts in the KB.
+# Fields (all optional):
+#   melee_only / ranged_only   core effect works only for that attack type
+#   ranged_penalty             {melee, ranged, what}: same effect, weaker for ranged
+#   melee_penalty              the item's range/split bonus works only for ranged heroes
+#   works_on_illusions         false | partial | true
+#   unique_group               key of `groups`: sources of one group do not stack
+#   pierces_debuff_immunity    true | false
+#   dispel                     basic | strong: dispel the item applies when used
+#   dispellable_by             basic | strong | no: how the effect/debuff of the item can be removed
+#   blocked_for_heroes         heroes for whom the main effect does not work at all
+#   removed                    no longer in the game (KB shop.status == removed)
+#   why                        one-line Russian reasons, keyed by the field that caused the mismatch
+patch: "7.41f"
+
+illusion_heroes: [phantom_lancer, naga_siren, terrorblade, spectre, chaos_knight]
+
+groups:
+  crit: {items: [lesser_crit, greater_crit, revenants_brooch], rule: "криты не стакаются: бросается сильнейший множитель, остальные игнорируются", src: "mechanics_a 11"}
+  bash: {items: [basher, abyssal_blade], rule: "Bash не стакается: работает источник, дольше лежащий в инвентаре", src: "mechanics_a 11"}
+  armor_reduction: {items: [desolator, orb_of_corrosion, blight_stone], rule: "снижения брони не стакаются между собой", src: "mechanics_a 2"}
+  slow_and_restoration: {items: [orb_of_frost, orb_of_corrosion, skadi], rule: "замедление и снижение Health Restoration у этих предметов не стакаются", src: "mechanics_a 10"}
+  range_bonus: {items: [monkey_king_bar, dragon_lance, hurricane_pike, hydras_breath], rule: "бонусы дальности атаки от MKB и предметов на основе Dragon Lance не стакаются", src: "mechanics_b 3"}
+  diffusal: {items: [diffusal_blade, disperser], rule: "несколько Diffusal не стакаются", src: "mechanics_a 11"}
+  spell_weakness: {items: [bloodstone, veil_of_discord], rule: "Spell Weakness от Bloodstone и Veil of Discord не стакается", src: "mechanics_a 4"}
+  kaya_spell_amp: {items: [kaya, kaya_and_sange, yasha_and_kaya], rule: "усиление заклинаний семейства Kaya не стакается", src: "mechanics_a 4"}
+  sange_family: {items: [sange, sange_and_yasha, kaya_and_sange, abyssal_blade], rule: "бонусы на основе Sange (сопротивление статусам, Health Restoration) не стакаются, берётся максимум", src: "mechanics_a 9, 10"}
+  yasha_speed: {items: [yasha, sange_and_yasha, yasha_and_kaya, manta], rule: "процент скорости движения на основе Yasha не стакается", src: "mechanics_a 12"}
+  heal_aura: {items: [mekansm, guardian_greaves], rule: "аура регенерации не стакается между Mekansm и Guardian Greaves", src: "mechanics_b 2"}
+  damage_block: {items: [vanguard, crimson_guard], rule: "блок урона нескольких источников не стакается", src: "mechanics_b 2"}
+
+items:
+  bfury:
+    melee_only: true
+    works_on_illusions: false
+    why: {melee_only: "Cleave работает только в ближнем бою (дальнему остаются +50 урона и Quell +5)", illusions: "Cleave и Quell на иллюзии не копируются"}
+    src: "mechanics_b 3, 1; mechanics_a 11"
+  echo_sabre:
+    melee_only: true
+    works_on_illusions: false
+    why: {melee_only: "Echo Strike (двойная атака) только у ближнего боя", illusions: "Echo Strike на иллюзии не копируется"}
+    src: "mechanics_b 3, 1"
+  harpoon:
+    melee_only: true
+    works_on_illusions: false
+    why: {melee_only: "Echo Strike и притягивание только у ближнего боя", illusions: "Echo Strike на иллюзии не копируется"}
+    src: "mechanics_b 3, 1"
+  basher:
+    ranged_penalty: {melee: 25, ranged: 10, what: "шанс Bash, %"}
+    unique_group: bash
+    works_on_illusions: false
+    pierces_debuff_immunity: true
+    dispellable_by: strong
+    blocked_for_heroes: [spirit_breaker, faceless_void, slardar, kez]
+    why: {ranged_penalty: "Bash у дальнего боя 10% вместо 25%", illusions: "Bash на иллюзии не копируется", blocked: "у этого героя Bash с предмета не срабатывает"}
+    src: "mechanics_a 11; mechanics_b 3, 1; KB"
+  abyssal_blade:
+    ranged_penalty: {melee: 25, ranged: 10, what: "шанс Bash, %"}
+    unique_group: bash
+    works_on_illusions: false
+    pierces_debuff_immunity: true
+    dispellable_by: strong
+    blocked_for_heroes: [spirit_breaker, faceless_void, slardar, kez]
+    why: {ranged_penalty: "Bash у дальнего боя 10% вместо 25% (актив Overwhelm работает у всех)", illusions: "Bash на иллюзии не копируется", blocked: "Bash с предмета у него не срабатывает (актив Overwhelm работает)"}
+    src: "mechanics_a 5, 11; mechanics_b 3, 1; KB"
+  monkey_king_bar:
+    works_on_illusions: partial
+    unique_group: range_bonus
+    why: {illusions: "на иллюзиях работает только пробитие уклонения, бонусные 70 магического урона нет"}
+    note: "Pierce: 80% атак игнорируют уклонение; +50 дальности атаки только у ближнего боя"
+    src: "mechanics_a 8; mechanics_b 1, 3"
+  bloodthorn:
+    note: "критического удара нет; Soul Rend даёт истинный удар по цели на 5 с, Pierce 40%"
+    src: "mechanics_a 8, 11"
+  javelin:
+    works_on_illusions: false
+    why: {illusions: "Pierce на иллюзии не копируется"}
+    src: "mechanics_b 1"
+  dragon_lance:
+    melee_penalty: true
+    unique_group: range_bonus
+    why: {melee_penalty: "+130 дальности атаки только у дальнего боя, ближнему остаются статы"}
+    src: "mechanics_b 3; KB"
+  hurricane_pike:
+    melee_penalty: true
+    unique_group: range_bonus
+    why: {melee_penalty: "+130 дальности и серия атак после Thrust только у дальнего боя"}
+    src: "mechanics_b 3; KB"
+  hydras_breath:
+    melee_penalty: true
+    unique_group: range_bonus
+    works_on_illusions: false
+    why: {melee_penalty: "дальность и Polycephaly (сплит-атаки) только у дальнего боя", illusions: "Miasma иллюзии не накладывают"}
+    src: "mechanics_b 3, 1"
+  specialists_array:
+    ranged_only: true
+    why: {ranged_only: "сплит-атаки (30%) только у дальнего боя"}
+    src: "mechanics_b 3; KB"
+  skadi:
+    works_on_illusions: false
+    unique_group: slow_and_restoration
+    why: {illusions: "Cold Attack идёт только от героя, на иллюзии не копируется"}
+    src: "mechanics_b 1, 3"
+  desolator:
+    works_on_illusions: false
+    unique_group: armor_reduction
+    pierces_debuff_immunity: true
+    why: {illusions: "Corruption на иллюзии не копируется"}
+    src: "mechanics_b 1; mechanics_a 2; KB"
+  orb_of_corrosion:
+    works_on_illusions: false
+    unique_group: armor_reduction
+    why: {illusions: "орбы на иллюзии не копируются"}
+    src: "mechanics_b 1, 3; mechanics_a 2"
+  blight_stone:
+    works_on_illusions: false
+    unique_group: armor_reduction
+    pierces_debuff_immunity: true
+    why: {illusions: "орбы на иллюзии не копируются"}
+    src: "mechanics_b 1; mechanics_a 2; KB"
+  orb_of_frost:
+    works_on_illusions: false
+    unique_group: slow_and_restoration
+    why: {illusions: "орбы на иллюзии не копируются"}
+    src: "mechanics_b 1, 3"
+  orb_of_venom:
+    works_on_illusions: false
+    why: {illusions: "орбы на иллюзии не копируются"}
+    src: "mechanics_b 1"
+  diffusal_blade:
+    works_on_illusions: false
+    unique_group: diffusal
+    why: {illusions: "иллюзии не сжигают ману (с 7.40)"}
+    src: "mechanics_b 1; mechanics_a 11"
+  disperser:
+    works_on_illusions: false
+    unique_group: diffusal
+    dispel: basic
+    why: {illusions: "иллюзии не сжигают ману (с 7.40)"}
+    src: "mechanics_b 1; mechanics_a 6"
+  maelstrom:
+    works_on_illusions: false
+    why: {illusions: "Chain Lightning на иллюзии не копируется"}
+    src: "mechanics_b 1"
+  mjollnir:
+    works_on_illusions: false
+    dispellable_by: basic
+    why: {illusions: "Chain Lightning на иллюзии не копируется"}
+    src: "mechanics_b 1"
+  gungir:
+    works_on_illusions: false
+    why: {illusions: "Chain Lightning на иллюзии не копируется"}
+    src: "mechanics_b 1"
+  satanic:
+    works_on_illusions: partial
+    dispel: basic
+    why: {illusions: "на иллюзиях работает только пассивный лайфстил 25%, актив Unholy Rage нет"}
+    src: "mechanics_b 1; mechanics_a 6, 10"
+  mask_of_madness:
+    works_on_illusions: partial
+    ranged_penalty: {melee: 12, ranged: 6, what: "скорость движения от Berserk, %"}
+    why: {illusions: "на иллюзиях работает только лайфстил, актив Berserk нет", ranged_penalty: "бонус скорости движения от Berserk 6% вместо 12%"}
+    src: "mechanics_b 1, 3"
+  radiance:
+    works_on_illusions: partial
+    why: {illusions: "иллюзия с Radiance жжёт 35 урона/с вместо 60"}
+    src: "mechanics_b 1"
+  manta:
+    unique_group: yasha_speed
+    dispel: basic
+    ranged_penalty: {melee: 33, ranged: 25, what: "урон иллюзий от урона героя, %"}
+    why: {ranged_penalty: "иллюзии Manta у дальнего наносят 25% вместо 33%"}
+    src: "mechanics_b 1, 3; mechanics_a 6"
+  lesser_crit:
+    works_on_illusions: true
+    unique_group: crit
+    src: "mechanics_b 1; mechanics_a 11"
+  greater_crit:
+    works_on_illusions: true
+    unique_group: crit
+    src: "mechanics_b 1; mechanics_a 11"
+  revenants_brooch:
+    works_on_illusions: true
+    unique_group: crit
+    pierces_debuff_immunity: false
+    src: "mechanics_b 1"
+  black_king_bar:
+    dispel: basic
+    works_on_illusions: false
+    why: {illusions: "активные предметы на иллюзиях не используются"}
+    note: "Avatar 9/8/7 с по уровням, базовый диспел при активации"
+    src: "mechanics_a 5, 6; mechanics_b 1"
+  aeon_disk:
+    dispel: strong
+    src: "mechanics_a 6"
+  lotus_orb:
+    dispel: basic
+    src: "mechanics_a 6"
+  nullifier:
+    dispel: basic
+    note: "диспеллит цель непрерывно в течение 4 с"
+    src: "mechanics_a 6"
+  cyclone:
+    dispel: basic
+    src: "mechanics_a 6"
+  wind_waker:
+    dispel: basic
+    src: "mechanics_a 6"
+  guardian_greaves:
+    dispel: basic
+    unique_group: heal_aura
+    src: "mechanics_a 6; mechanics_b 2"
+  mekansm:
+    unique_group: heal_aura
+    src: "mechanics_b 2"
+  silver_edge:
+    pierces_debuff_immunity: false
+    dispellable_by: "no"
+    note: "Break на 5 с и лимит скорости 200; не пробивает Debuff Immunity"
+    src: "mechanics_a 5, 6, 7"
+  shivas_guard:
+    pierces_debuff_immunity: true
+    dispellable_by: basic
+    note: "Freezing Aura: -40 скорости атаки, не снижает лечение (с 7.41), пробивает Debuff Immunity; несколько аур не стакаются"
+    src: "mechanics_a 5, 10, 11"
+  heavens_halberd:
+    dispellable_by: strong
+    note: "Disarm снимается только сильным диспелом; +9 брони и 25% уклонения"
+    src: "mechanics_a 6, 8"
+  sheepstick:
+    dispellable_by: strong
+    src: "KB"
+  ghost:
+    pierces_debuff_immunity: false
+    src: "mechanics_a 5"
+  ethereal_blade:
+    pierces_debuff_immunity: false
+    src: "mechanics_a 5"
+  meteor_hammer:
+    pierces_debuff_immunity: false
+    src: "KB"
+  solar_crest:
+    pierces_debuff_immunity: false
+    src: "KB"
+  kaya:
+    unique_group: kaya_spell_amp
+    src: "mechanics_a 4"
+  kaya_and_sange:
+    unique_group: kaya_spell_amp
+    src: "mechanics_a 4, 9"
+  yasha_and_kaya:
+    unique_group: kaya_spell_amp
+    src: "mechanics_a 4, 12"
+  sange:
+    unique_group: sange_family
+    src: "mechanics_a 9"
+  sange_and_yasha:
+    unique_group: sange_family
+    src: "mechanics_a 9, 12"
+  yasha:
+    unique_group: yasha_speed
+    src: "mechanics_a 12"
+  bloodstone:
+    unique_group: spell_weakness
+    src: "mechanics_a 4"
+  veil_of_discord:
+    unique_group: spell_weakness
+    dispellable_by: basic
+    src: "mechanics_a 4"
+  vanguard:
+    unique_group: damage_block
+    ranged_penalty: {melee: 50, ranged: 25, what: "блок урона, при шансе 60%"}
+    why: {ranged_penalty: "блок 25 вместо 50 урона у дальнего боя"}
+    src: "mechanics_b 3"
+  crimson_guard:
+    unique_group: damage_block
+    ranged_penalty: {melee: 75, ranged: 50, what: "блок урона пассивом, при шансе 60%"}
+    why: {ranged_penalty: "блок 50 вместо 75 урона у дальнего боя"}
+    dispellable_by: "no"
+    src: "mechanics_b 3; KB"
+  phase_boots:
+    ranged_penalty: {melee: 20, ranged: 10, what: "скорость движения от Phase, %"}
+    why: {ranged_penalty: "ускорение Phase 10% вместо 20% у дальнего боя"}
+    src: "mechanics_b 3"
+  assault:
+    pierces_debuff_immunity: true
+    src: "KB; mechanics_b 2"
+  devastator:
+    pierces_debuff_immunity: true
+    src: "KB"
+  pavise:
+    pierces_debuff_immunity: false
+    src: "KB"
+  wraith_pact:
+    pierces_debuff_immunity: false
+    src: "KB"
+  eternal_shroud:
+    removed: true
+    src: "KB: убран в 7.41"
+  cornucopia:
+    removed: true
+    src: "KB: убран в 7.41"
+  hood_of_defiance:
+    removed: true
+    src: "KB: убран в 7.33"
+  enhancement_vast:
+    removed: true
+    src: "mechanics_b 7: убраны в 7.41"
+  enhancement_wise:
+    removed: true
+    src: "mechanics_b 7: убраны в 7.41"
+  enhancement_boundless:
+    removed: true
+    src: "mechanics_b 7: убраны в 7.41"

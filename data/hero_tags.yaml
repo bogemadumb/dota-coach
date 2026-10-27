@@ -1,0 +1,136 @@
+patch: "7.41f"
+bkb_pierce_ult_exclude:
+  dark_seer: "Wall of Replica: иллюзии бьют обычными атаками, сама ульта не контролирует"
+  dragon_knight: "Elder Dragon Form: самоусиление, враги страдают от атак героя"
+  morphling: "Morph: превращение в союзника или врага; сама ульта угрозы не наносит"
+  rubick: "Spell Steal: крадёт заклинание, угрозы самой ульты нет"
+  spectre: "Haunt: иллюзии атакуют (урон идёт обычными атаками), без своего эффекта на врагов"
+  windrunner: "Focus Fire: усиливает атаки по цели, урон идёт атаками"
+heroes:
+  abaddon: {tags: [heal, tanky_armor], note: "Aphotic Shield, Borrowed Time survival"}
+  abyssal_underlord: {tags: [root_leash, magic_burst], note: "Firestorm, Pit of Malice root"}
+  alchemist: {tags: [heal, physical_burst], note: "Chemical Rage regen, fast attacks"}
+  ancient_apparition: {tags: [magic_burst, bkb_pierce_ult], note: "Ice Blast pierces BKB, anti-heal"}
+  antimage: {tags: [escape, passive_core], note: "blink, mana break"}
+  arc_warden: {tags: [illusions, evasion], note: "Tempest Double clone, Magnetic Field evasion"}
+  axe: {tags: [disable_chain, bkb_pierce_ult], note: "Berserker's Call, Culling Blade pierce BKB"}
+  bane: {tags: [disable_chain, bkb_pierce_ult], note: "Nightmare, Fiend's Grip pierces BKB"}
+  batrider: {tags: [root_leash, escape, bkb_pierce_ult], note: "Lasso pierces BKB, Firefly"}
+  beastmaster: {tags: [summons, bkb_pierce_ult, disable_chain], note: "boar and hawk, Primal Roar pierces BKB"}
+  bloodseeker: {tags: [silence, bkb_pierce_ult, heal], note: "Blood Rite silence, Rupture, Sanguivore"}
+  bounty_hunter: {tags: [invisibility, physical_burst, bkb_pierce_ult], note: "Shadow Walk, Jinada crit"}
+  brewmaster: {tags: [summons, disable_chain, tanky_armor], note: "Primal Split elementals, Thunder Clap"}
+  bristleback: {tags: [tanky_armor, passive_core], note: "back damage reduction, Quill Spray stacks"}
+  broodmother: {tags: [summons, pushers, escape], note: "spiderlings, webs, tower push"}
+  centaur: {tags: [disable_chain, tanky_armor], note: "Hoof Stomp, Retaliate, durable"}
+  chaos_knight: {tags: [illusions, physical_burst, disable_chain], note: "Phantasm illusions, crits, Chaos Bolt"}
+  chen: {tags: [summons, heal, pushers], note: "creep army, Hand of God heal"}
+  clinkz: {tags: [invisibility, physical_burst], note: "Skeleton Walk, Strafe burst"}
+  crystal_maiden: {tags: [magic_burst, root_leash], note: "Frostbite root, Freezing Field"}
+  dark_seer: {tags: [disable_chain, illusions], note: "Vacuum, Wall of Replica illusions"}
+  dark_willow: {tags: [disable_chain, root_leash, magic_burst], note: "Bramble Maze root, Cursed Crown, Terrorize"}
+  dawnbreaker: {tags: [heal, tanky_armor, bkb_pierce_ult], note: "Luminosity, Solar Guardian heal, durable"}
+  dazzle: {tags: [heal], note: "Shallow Grave, Shadow Wave heal"}
+  death_prophet: {tags: [silence, pushers, magic_burst, bkb_pierce_ult], note: "Silence, Exorcism pushes towers"}
+  disruptor: {tags: [silence, root_leash, magic_burst], note: "Static Storm silence, Kinetic Field"}
+  doom_bringer: {tags: [silence, bkb_pierce_ult], note: "Doom pierces BKB, mutes abilities"}
+  dragon_knight: {tags: [tanky_armor, pushers], note: "Elder Dragon Form, durable pusher"}
+  drow_ranger: {tags: [physical_burst, silence], note: "Gust silence, Marksmanship ranged burst"}
+  earth_spirit: {tags: [disable_chain, silence, escape, bkb_pierce_ult], note: "Boulder Smash, Geomagnetic Grip silence"}
+  earthshaker: {tags: [disable_chain, magic_burst], note: "Fissure, Echo Slam, Aftershock"}
+  elder_titan: {tags: [magic_burst, disable_chain, bkb_pierce_ult], note: "Echo Stomp, Earth Splitter percent damage"}
+  ember_spirit: {tags: [escape, root_leash, magic_burst], note: "Searing Chains root, Fire Remnant dashes"}
+  enchantress: {tags: [heal, pushers], note: "Nature's Attendants heal, Enchant creeps"}
+  enigma: {tags: [summons, disable_chain, bkb_pierce_ult], note: "eidolons, Black Hole pierces BKB"}
+  faceless_void: {tags: [bkb_pierce_ult, escape, disable_chain], note: "Chronosphere pierces BKB, Time Walk"}
+  furion: {tags: [pushers, summons, escape], note: "treants, global teleport, split push"}
+  grimstroke: {tags: [silence, magic_burst, disable_chain, bkb_pierce_ult], note: "Phantom's Embrace silence, Soulbind"}
+  gyrocopter: {tags: [magic_burst, physical_burst], note: "Call Down, Homing Missile, Flak Cannon"}
+  hoodwink: {tags: [root_leash, physical_burst], note: "Bushwhack root, Sharpshooter"}
+  huskar: {tags: [passive_core, heal, bkb_pierce_ult], note: "low-HP regen, Life Break pierces BKB"}
+  invoker: {tags: [magic_burst, disable_chain, invisibility], note: "spell combos, Tornado, Ghost Walk"}
+  jakiro: {tags: [pushers, magic_burst, disable_chain], note: "Macropyre, Ice Path, dual breath"}
+  juggernaut: {tags: [physical_burst, heal, bkb_pierce_ult], note: "Omnislash pierces BKB, healing ward"}
+  keeper_of_the_light: {tags: [magic_burst, disable_chain], note: "Illuminate, Blinding Light, Solar Bind"}
+  kez: {tags: [physical_burst, escape, invisibility, bkb_pierce_ult], note: "Raven's Veil, Falcon Rush, bleed combos"}
+  kunkka: {tags: [disable_chain, magic_burst], note: "Torrent, Tidal Wave, Ghostship stun"}
+  largo: {tags: [heal, disable_chain], note: "Island Elixir heal, Frogstomp ministuns"}
+  legion_commander: {tags: [bkb_pierce_ult, heal, physical_burst], note: "Duel pierces BKB, Press the Attack"}
+  leshrac: {tags: [magic_burst, pushers, disable_chain], note: "Pulse Nova, Lightning Storm, Split Earth"}
+  lich: {tags: [magic_burst], note: "Frost Blast, Chain Frost nukes"}
+  life_stealer: {tags: [heal, passive_core, escape], note: "Feast lifesteal, Rage immunity, Infest"}
+  lina: {tags: [magic_burst], note: "Dragon Slave, Laguna Blade burst"}
+  lion: {tags: [disable_chain, magic_burst], note: "Earth Spike, Hex, Finger of Death"}
+  lone_druid: {tags: [summons, root_leash], note: "Spirit Bear, Entangle"}
+  luna: {tags: [physical_burst, pushers], note: "Moon Glaives, Eclipse"}
+  lycan: {tags: [summons, pushers, physical_burst], note: "wolves, Shapeshift crits"}
+  magnataur: {tags: [disable_chain, bkb_pierce_ult], note: "Reverse Polarity pierces BKB, Skewer"}
+  marci: {tags: [physical_burst, disable_chain, escape], note: "Dispose, Rebound, Unleash flurry"}
+  mars: {tags: [tanky_armor, physical_burst, disable_chain], note: "Bulwark, Spear stun, Arena of Blood"}
+  medusa: {tags: [mana_dependent, tanky_armor, bkb_pierce_ult], note: "Mana Shield, Split Shot, Stone Gaze"}
+  meepo: {tags: [summons, root_leash, escape], note: "clones, Earthbind, Poof"}
+  mirana: {tags: [invisibility, escape], note: "Moonlight Shadow team invis, Leap"}
+  monkey_king: {tags: [escape, physical_burst, summons], note: "Tree Dance, Jingu crits, Wukong soldiers"}
+  morphling: {tags: [escape, physical_burst], note: "Waveform, Adaptive Strike, Morph"}
+  muerta: {tags: [ethereal_ghost, silence, magic_burst], note: "Pierce the Veil ethereal, Calling silence"}
+  naga_siren: {tags: [illusions, root_leash, disable_chain], note: "Mirror Image, Ensnare, Song of the Siren"}
+  necrolyte: {tags: [heal, ethereal_ghost, magic_burst], note: "Ghost Shroud, Heartstopper, Reaper's Scythe"}
+  nevermore: {tags: [magic_burst, physical_burst], note: "Shadowraze, Necromastery, Requiem"}
+  night_stalker: {tags: [silence, disable_chain], note: "Void, Crippling Fear silence"}
+  nyx_assassin: {tags: [disable_chain, invisibility, magic_burst, bkb_pierce_ult], note: "Impale, Vendetta invis, Mana Burn"}
+  obsidian_destroyer: {tags: [mana_dependent, magic_burst], note: "Arcane Orb, Sanity's Eclipse mana burn"}
+  ogre_magi: {tags: [disable_chain, magic_burst], note: "Stun, Fireblast, Multicast"}
+  omniknight: {tags: [heal, magic_burst], note: "Purification, Guardian Angel"}
+  oracle: {tags: [heal, root_leash, magic_burst], note: "False Promise, Fortune's End root"}
+  pangolier: {tags: [escape, disable_chain, physical_burst], note: "Rolling Thunder, Swashbuckle, Shield Crash"}
+  phantom_assassin: {tags: [evasion, physical_burst, escape], note: "Blur evasion, Coup de Grace crits"}
+  phantom_lancer: {tags: [illusions, escape, passive_core], note: "Juxtapose illusions, Phantom Rush"}
+  phoenix: {tags: [magic_burst, escape, disable_chain, bkb_pierce_ult], note: "Icarus Dive, Sun Ray, Supernova"}
+  primal_beast: {tags: [disable_chain, tanky_armor, bkb_pierce_ult], note: "Onslaught, Pulverize pierces BKB"}
+  puck: {tags: [escape, silence, root_leash], note: "Phase Shift, Waning Rift, Dream Coil"}
+  pudge: {tags: [disable_chain, bkb_pierce_ult, tanky_armor], note: "Hook and Dismember pierce BKB"}
+  pugna: {tags: [magic_burst, pushers, heal], note: "Nether Blast, Life Drain, Nether Ward"}
+  queenofpain: {tags: [magic_burst, escape, bkb_pierce_ult], note: "Blink, Scream, Sonic Wave pierces BKB"}
+  rattletrap: {tags: [disable_chain, bkb_pierce_ult, tanky_armor], note: "Power Cogs, Hookshot pierces BKB"}
+  razor: {tags: [bkb_pierce_ult, physical_burst], note: "Static Link, Eye of the Storm"}
+  riki: {tags: [invisibility, escape, passive_core], note: "permanent invis, Backstab, Blink Strike"}
+  ringmaster: {tags: [disable_chain, escape], note: "Tame the Beasts fear, Escape Act"}
+  rubick: {tags: [disable_chain, magic_burst], note: "Telekinesis, steals your spells"}
+  sand_king: {tags: [disable_chain, magic_burst, invisibility], note: "Burrowstrike, Epicenter, Sand Storm"}
+  shadow_demon: {tags: [disable_chain, magic_burst, bkb_pierce_ult], note: "Disruption, Shadow Poison stacks"}
+  shadow_shaman: {tags: [disable_chain, pushers, bkb_pierce_ult], note: "Shackles, Hex, Mass Serpent Ward"}
+  shredder: {tags: [tanky_armor, magic_burst, escape], note: "Reactive Armor, Chakram, Timber Chain"}
+  silencer: {tags: [silence, bkb_pierce_ult], note: "Global Silence pierces BKB, Last Word"}
+  skeleton_king: {tags: [physical_burst, summons, heal], note: "Mortal Strike crits, skeletons, Reincarnation"}
+  skywrath_mage: {tags: [silence, magic_burst], note: "Ancient Seal, Mystic Flare burst"}
+  slardar: {tags: [disable_chain, bkb_pierce_ult], note: "Slithereen Crush, Corrosive Haze pierces BKB"}
+  slark: {tags: [escape, heal, passive_core], note: "Pounce, Shadow Dance, Essence Shift"}
+  snapfire: {tags: [magic_burst, disable_chain], note: "Scatterblast, Firesnap Cookie, Mortimer Kisses"}
+  sniper: {tags: [physical_burst, magic_burst], note: "long range, Assassinate"}
+  spectre: {tags: [passive_core, illusions, tanky_armor], note: "Dispersion, Desolate, Haunt illusions"}
+  spirit_breaker: {tags: [disable_chain, bkb_pierce_ult, escape], note: "Charge, Greater Bash, Nether Strike pierce BKB"}
+  storm_spirit: {tags: [mana_dependent, escape, magic_burst], note: "Ball Lightning, Electric Vortex"}
+  sven: {tags: [physical_burst, disable_chain], note: "Storm Hammer, Great Cleave, God's Strength"}
+  techies: {tags: [magic_burst, invisibility, silence], note: "hidden mines, Blast Off silence"}
+  templar_assassin: {tags: [physical_burst, invisibility, escape], note: "Meld, Psi Blades, Refraction"}
+  terrorblade: {tags: [illusions, pushers, physical_burst], note: "Conjure Image, Metamorphosis, Sunder"}
+  tidehunter: {tags: [disable_chain, tanky_armor], note: "Ravage, Anchor Smash, durable"}
+  tinker: {tags: [magic_burst, pushers, mana_dependent], note: "Laser, Rearm, March of Machines"}
+  tiny: {tags: [disable_chain, magic_burst], note: "Avalanche, Toss, Tree Grab"}
+  treant: {tags: [root_leash, heal, bkb_pierce_ult], note: "Nature's Grasp, Living Armor, Overgrowth"}
+  troll_warlord: {tags: [physical_burst, heal, root_leash], note: "Battle Trance lifesteal, Berserker's Rage"}
+  tusk: {tags: [disable_chain, physical_burst, bkb_pierce_ult], note: "Snowball, Walrus Punch, Ice Shards"}
+  undying: {tags: [summons, heal, tanky_armor], note: "Tombstone zombies, Flesh Golem, Soul Rip"}
+  ursa: {tags: [physical_burst, passive_core], note: "Fury Swipes, Enrage"}
+  vengefulspirit: {tags: [disable_chain, physical_burst, bkb_pierce_ult], note: "Magic Missile, aura, Nether Swap"}
+  venomancer: {tags: [summons, magic_burst, pushers], note: "Plague Wards, poison damage over time"}
+  viper: {tags: [magic_burst, bkb_pierce_ult, tanky_armor], note: "Viper Strike pierces BKB, Corrosive Skin"}
+  visage: {tags: [summons, magic_burst, tanky_armor], note: "Familiars, Soul Assumption, Gravekeeper's Cloak"}
+  void_spirit: {tags: [escape, magic_burst, bkb_pierce_ult], note: "Astral Step, Dissimilate, Aether Remnant"}
+  warlock: {tags: [summons, disable_chain, bkb_pierce_ult], note: "Fatal Bonds, golems pierce BKB"}
+  weaver: {tags: [escape, invisibility], note: "Shukuchi, Time Lapse, Swarm"}
+  windrunner: {tags: [evasion, escape, physical_burst], note: "Windrun evasion, Focus Fire"}
+  winter_wyvern: {tags: [heal, magic_burst, bkb_pierce_ult], note: "Cold Embrace, Winter's Curse pierces BKB"}
+  wisp: {tags: [heal, escape], note: "Overcharge, Relocate, Tether"}
+  witch_doctor: {tags: [heal, magic_burst, bkb_pierce_ult], note: "Voodoo Restoration, Death Ward pierces BKB"}
+  zuus: {tags: [magic_burst], note: "Lightning Bolt, Thundergod's Wrath"}

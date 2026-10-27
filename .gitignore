@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+logs/
+config.yaml
+data/cache/builds/
+data/cache/icons/
+data/cache/official/
+data/cache/stratz/raw/
+data/kb/builds/
+data/kb/builds_stratz/
+.DS_Store

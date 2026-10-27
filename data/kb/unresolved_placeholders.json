@@ -1,0 +1,106 @@
+[
+  {
+    "where": "ascetic_cap:desc",
+    "placeholder": "duration"
+  },
+  {
+    "where": "ascetic_cap:desc",
+    "placeholder": "slow_resistance"
+  },
+  {
+    "where": "ascetic_cap:desc",
+    "placeholder": "status_resistance"
+  },
+  {
+    "where": "elder_titan_natural_order:shard",
+    "placeholder": "armor_per_tick"
+  },
+  {
+    "where": "elder_titan_natural_order:shard",
+    "placeholder": "magic_resistance_per_tick"
+  },
+  {
+    "where": "elder_titan_natural_order:shard",
+    "placeholder": "max_stacks"
+  },
+  {
+    "where": "elder_titan_natural_order:shard",
+    "placeholder": "tick_rate"
+  },
+  {
+    "where": "huskar_burning_spear:scepter",
+    "placeholder": "multishot_targets"
+  },
+  {
+    "where": "juggernaut_blade_fury:scepter",
+    "placeholder": "attack_interval"
+  },
+  {
+    "where": "lone_druid_spirit_bear:notes",
+    "placeholder": "base_magic_resistance"
+  },
+  {
+    "where": "mars_bulwark:scepter",
+    "placeholder": "soldier_count"
+  },
+  {
+    "where": "muerta_pierce_the_veil:shard",
+    "placeholder": "spell_amp_steal"
+  },
+  {
+    "where": "muerta_pierce_the_veil:shard",
+    "placeholder": "spell_lifesteal"
+  },
+  {
+    "where": "obsidian_destroyer_arcane_orb:scepter",
+    "placeholder": "bounce_damage_reduction"
+  },
+  {
+    "where": "razor_static_link:shard",
+    "placeholder": "move_speed_factor"
+  },
+  {
+    "where": "sandking_scorpion_strike:shard",
+    "placeholder": "caustic_damage_pct"
+  },
+  {
+    "where": "shadow_shaman_fowl_play:shard",
+    "placeholder": "ally_voodoo_duration"
+  },
+  {
+    "where": "shadow_shaman_fowl_play:shard",
+    "placeholder": "chicken_illusions"
+  },
+  {
+    "where": "special_bonus_unique_invoker_forged_spirit_armor_reduction",
+    "placeholder": "bonus_armor_removed"
+  },
+  {
+    "where": "special_bonus_unique_naga_siren_reel_in_speed",
+    "placeholder": "bonus_pull_strength"
+  },
+  {
+    "where": "special_bonus_unique_tinker_5",
+    "placeholder": "bonus_AbilityChannelTime"
+  },
+  {
+    "where": "tome_of_knowledge:desc",
+    "placeholder": "customval_team_tomes_used"
+  },
+  {
+    "where": "venomancer_poison_sting:shard",
+    "placeholder": "debuff_dmg"
+  },
+  {
+    "where": "warlock_shadow_word:scepter",
+    "placeholder": "additional_targets"
+  },
+  {
+    "where": "warlock_shadow_word:scepter",
+    "placeholder": "cast_aoe"
+  },
+  {
+    "where": "warlock_shadow_word:scepter",
+    "placeholder": "secondary_reduction"
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "patch": "7.41f",
+  "note": "Hand-curated constants. Items marked verify=true are not present in the official datafeed and are waiting for confirmation by the mechanics research.",
+  "level_formula": {
+    "value": "attr(L) = base + gain * (L - 1); derived level-L stat = official level-1 stat + coefficient * (attr(L) - attr(1))",
+    "source": "standard hero progression; no separate attribute-bonus ability exists in the 7.41f datafeed (no ability with 'attribute' in its name on any of 127 heroes)",
+    "verify": true
+  },
+  "level_cap": {
+    "value": 30,
+    "source": "mechanics_b.md: since 7.40 talents are taken with separate points at levels 10/15/20/25/27/28/29/30",
+    "verify": false
+  },
+  "health_per_str": {
+    "value": 22,
+    "source": "fitted: official herodata max_health - 22*str_base is the constant 120 on all 127 heroes",
+    "verify": false
+  },
+  "health_regen_per_str": {
+    "value": 0.1,
+    "source": "fitted: official herodata health_regen - 0.1*str_base equals dotaconstants base_health_regen on all 127 heroes",
+    "verify": false
+  },
+  "mana_per_int": {
+    "value": 12,
+    "source": "fitted: official herodata max_mana - 12*int_base is the constant 75 on 125 of 127 heroes (Huskar 0, Ogre Magi 120 are hero-specific offsets)",
+    "verify": false
+  },
+  "mana_regen_per_int": {
+    "value": 0.05,
+    "source": "fitted: official herodata mana_regen - 0.05*int_base equals dotaconstants base_mana_regen on all 127 heroes",
+    "verify": false
+  },
+  "armor_per_agi": {
+    "value": 0.1666667,
+    "source": "fitted: official herodata armor - agi_base/6 equals dotaconstants base_armor on all 127 heroes",
+    "verify": false
+  },
+  "attack_speed_per_agi": {
+    "value": 1,
+    "source": "standard mechanic, not derivable from datafeed; confirmed by Liquipedia only (mechanics_a.md), not in official notes",
+    "verify": true
+  },
+  "base_attack_speed": {
+    "value": 100,
+    "source": "standard mechanic: attacks per second = (100 + bonus attack speed) / (100 * BAT); confirmed by Liquipedia only (mechanics_a.md), not in official notes",
+    "verify": true
+  },
+  "attack_speed_min": {
+    "value": 20,
+    "source": "standard mechanic",
+    "verify": true
+  },
+  "attack_speed_max": {
+    "value": 700,
+    "source": "standard mechanic",
+    "verify": true
+  },
+  "damage_per_primary_point": {
+    "value": 1,
+    "source": "fitted: official herodata damage_min - dotaconstants base_attack_min equals the primary attribute base on all 102 str/agi/int heroes",
+    "verify": false
+  },
+  "damage_per_point_universal": {
+    "value": 0.45,
+    "source": "official patch notes 7.38: Universal Heroes' damage per attribute decreased from 0.7 to 0.45",
+    "verify": false
+  },
+  "armor_reduction_per_point": {
+    "value": 0.06,
+    "source": "standard mechanic: physical reduction = 0.06*A / (1 + 0.06*|A|)",
+    "verify": true
+  }
+}

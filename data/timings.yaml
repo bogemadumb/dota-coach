@@ -1,0 +1,169 @@
+# Map timings for patch 7.41f (2026-09-15). Sources: dota2.com/patches/7.38..7.41f, liquipedia.net/dota2.
+# Values marked "unverified" are commonly accepted but were not found stated in a source.
+# priority: 3 urgent, 2 normal mode, 1 chatty mode only. lead: seconds before the event to speak.
+patch: "7.41f"
+
+schedule:
+  - id: bounty_start
+    times: [0]
+    lead: 15
+    priority: 2
+    say: "Баунти-руны на старте"
+    say_long: "Через пятнадцать секунд баунти-руны в реке, заберите их командой"
+
+  - id: rune_water
+    times: [120, 240]
+    lead: 10
+    priority: 2
+    category: rune
+    say: "Водная руна через {lead}"
+    say_long: "Через {lead} секунд водные руны на обоих слотах, хилят и дают ману"
+
+  - id: rune_power
+    first: 360
+    interval: 120
+    lead: 10
+    priority: 2
+    category: rune
+    say: "Руна силы через {lead}"
+    say_long: "Через {lead} секунд руна силы в одном из речных слотов"
+
+  - id: rune_bounty
+    first: 240
+    interval: 240
+    lead: 10
+    priority: 1
+    say: "Баунти через {lead}"
+    say_long: "Через {lead} секунд баунти-руны в лесу каждой стороны"
+
+  - id: wisdom_shrine
+    first: 420  # unverified: derived from "every 7 minutes" (7.38)
+    interval: 420
+    lead: 20
+    priority: 2
+    say: "Мудрость через {lead}"
+    say_long: "Через {lead} секунд святилище мудрости в оффлейн-лесу, это опыт"
+
+  - id: lotus
+    first: 180  # unverified: pool starts empty, +1 lotus every 180 s
+    interval: 180
+    until: 2100
+    priority: 1
+    say: "Новый лотос"
+    say_long: "В пуле вырос лотос, можно забрать"
+
+  - id: stack
+    first: 53  # unverified: commonly accepted pull second
+    interval: 60
+    until: 1800
+    lead: 8
+    priority: 1
+    category: stack
+    say: "Стак через {lead}"
+    say_long: "Через {lead} секунд оттягивай лагерь, получится стак"
+
+  - id: night
+    first: 300
+    interval: 600
+    lead: 30
+    priority: 1
+    category: daynight
+    say: "Ночь через {lead}"
+    say_long: "Через {lead} секунд ночь, обзор сократится"
+
+  - id: day
+    first: 600
+    interval: 600
+    lead: 30
+    priority: 1
+    category: daynight
+    say: "День через {lead}"
+    say_long: "Через {lead} секунд день"
+
+  - id: siege
+    first: 300
+    interval: 300
+    lead: 0
+    priority: 1
+    say: "Осадная волна"
+    say_long: "В этой волне осадный крип, пуш будет сильнее"
+
+  # Tier 1 neutral items are available from 0:00 since 7.41 (6 Madstone), no timing hint needed.
+
+  - id: neutral_t2
+    times: [900]
+    priority: 2
+    category: neutral
+    say: "Второй тир нейтралок"
+    say_long: "Открылся второй тир нейтральных предметов"
+
+  - id: neutral_t3
+    times: [1500]
+    priority: 2
+    category: neutral
+    say: "Третий тир нейтралок"
+    say_long: "Открылся третий тир нейтральных предметов"
+
+  - id: neutral_t4
+    times: [2100]
+    priority: 2
+    category: neutral
+    say: "Четвёртый тир нейтралок"
+    say_long: "Открылся четвёртый тир нейтральных предметов и большие лотосы"
+
+  - id: neutral_t5
+    times: [3600]
+    priority: 2
+    category: neutral
+    say: "Пятый тир нейтралок"
+    say_long: "Открылся пятый тир нейтральных предметов"
+
+  - id: tormentor_first
+    times: [1200]
+    lead: 30
+    priority: 2
+    say: "Торментор через {lead}"
+    say_long: "Через {lead} секунд появится торментор, начинает в нижней пропасти. Это аганим шард"
+
+  - id: roshan_roam
+    times: [900]
+    lead: 20
+    priority: 1
+    say: "Рошан начнёт ходить"
+    say_long: "С пятнадцатой минуты рошан переходит между ямами при смене дня и ночи"
+
+relative:
+  roshan_killed:
+    - id: aegis_expire
+      after: 300
+      lead: 30
+      priority: 3
+      say: "Аегис сгорит через {lead}"
+      say_long: "Через {lead} секунд аегис пропадёт"
+    - id: roshan_maybe_soon
+      after: 480
+      lead: 30
+      priority: 2
+      category: roshan
+      say: "Рошан может ожить через {lead}"
+      say_long: "Через {lead} секунд рошан может возродиться, гарантированно через три с половиной минуты"
+    - id: roshan_maybe
+      after: 480
+      priority: 2
+      category: roshan
+      say: "Рошан может быть жив"
+      say_long: "Рошан мог возродиться, проверьте яму"
+    - id: roshan_sure
+      after: 660
+      priority: 3
+      category: roshan
+      say: "Рошан точно жив"
+      say_long: "Рошан точно возродился"
+
+  tormentor_killed:
+    - id: tormentor_respawn
+      after: 600
+      lead: 30
+      priority: 2
+      say: "Торментор через {lead}"
+      say_long: "Через {lead} секунд торментор возродится"

@@ -1,0 +1,144 @@
+# Counter-item rules for patch 7.41f. Keys are dotaconstants item keys without "item_".
+# Every key here was checked to exist in dotaconstants and to appear in current OpenDota item popularity
+# (01.10.2026); removed items (hood_of_defiance, eternal_shroud) are deliberately absent. infused_raindrop is still in the shop (225, official datafeed).
+# The rules only produce candidates; the model picks with gold, role, allies' items and game phase in mind.
+#   roles: core = positions 1-3, support = 4-5, any = both.
+patch: "7.41f"
+
+tags:
+  evasion: "уклонение у врага (PA, Windranger, Butterfly)"
+  illusions: "иллюзии и клоны"
+  summons: "призванные юниты"
+  invisibility: "невидимость"
+  heal: "сильное лечение или реген"
+  magic_burst: "магический урон взрывом"
+  physical_burst: "физический урон, криты"
+  disable_chain: "много станов и контроля"
+  silence: "сайленсы"
+  escape: "мобильность и уход (блинки, прыжки)"
+  tanky_armor: "много брони или здоровья"
+  passive_core: "сила героя в пассивках (нужен break)"
+  ethereal_ghost: "уходит в эфир (Ghost, бесплотность)"
+  mana_dependent: "живёт на мане"
+  pushers: "сильный пуш"
+  root_leash: "рут и привязка"
+  bkb_pierce_ult: "ульта, пробивающая BKB"
+
+rules:
+  - tag: evasion
+    roles: [core]
+    items: [monkey_king_bar, bloodthorn, javelin]
+    reason: "MKB и Bloodthorn дают истинный удар, уклонение перестаёт работать"
+  - tag: illusions
+    roles: [core]
+    items: [mjollnir, bfury, maelstrom, radiance, shivas_guard]
+    reason: "урон по площади чистит иллюзии"
+  - tag: illusions
+    roles: [support]
+    items: [crimson_guard, pipe]
+    reason: "командная защита против толпы иллюзий"
+  - tag: summons
+    roles: [any]
+    items: [mjollnir, maelstrom, crimson_guard, shivas_guard]
+    reason: "урон по площади и блок против множества юнитов"
+  - tag: invisibility
+    roles: [support]
+    items: [dust, ward_sentry]
+    reason: "пыль и сентри раскрывают невидимых"
+  - tag: invisibility
+    roles: [core]
+    items: [dust]
+    reason: "пыль с собой, если саппорт не носит"
+  - tag: heal
+    roles: [any]
+    items: [spirit_vessel]
+    reason: "Vessel режет лечение и реген"
+  - tag: heal
+    roles: [core]
+    items: [skadi]
+    reason: "Skadi режет лечение на 50% (Shiva's Guard с 7.41 лечение не режет)"
+  - tag: magic_burst
+    roles: [core]
+    items: [black_king_bar, mage_slayer, pipe]
+    reason: "BKB от магии и контроля, Pipe и Mage Slayer режут магический урон"
+  - tag: magic_burst
+    roles: [support]
+    items: [glimmer_cape, pipe, force_staff]
+    reason: "Glimmer спасает от магии, Pipe на команду"
+  - tag: physical_burst
+    roles: [core]
+    items: [blade_mail, assault, butterfly, satanic]
+    reason: "броня, уклонение или Blade Mail против физики"
+  - tag: physical_burst
+    roles: [support]
+    items: [ghost, solar_crest, force_staff, crimson_guard]
+    reason: "Ghost и Force спасают от физического урона"
+  - tag: disable_chain
+    roles: [core]
+    items: [black_king_bar, manta, sphere, aeon_disk]
+    reason: "BKB от контроля, Linken от точечного, Aeon Disk от взрыва"
+  - tag: disable_chain
+    roles: [support]
+    items: [lotus_orb, glimmer_cape, force_staff]
+    reason: "Lotus отражает и диспелит, Force выводит из-под контроля"
+  - tag: silence
+    roles: [core]
+    items: [manta, black_king_bar]
+    reason: "Manta снимает сайленс, BKB не даёт его наложить"
+  - tag: silence
+    roles: [support]
+    items: [lotus_orb, guardian_greaves]
+    reason: "Lotus и Greaves снимают сайленс"
+  - tag: escape
+    roles: [core]
+    items: [orchid, bloodthorn, abyssal_blade, sheepstick, gungir, rod_of_atos]
+    reason: "сайленс, хекс, рут или стан не дают уйти"
+  - tag: escape
+    roles: [support]
+    items: [rod_of_atos, gungir, cyclone]
+    reason: "рут и Eul ловят мобильных героев"
+  - tag: tanky_armor
+    roles: [core]
+    items: [desolator, assault, silver_edge, diffusal_blade]
+    reason: "минус броня и break против толстых"
+  - tag: passive_core
+    roles: [core]
+    items: [silver_edge]
+    reason: "Silver Edge выключает пассивки"
+  - tag: ethereal_ghost
+    roles: [any]
+    items: [nullifier, cyclone]
+    reason: "Nullifier снимает эфир и Ghost"
+  - tag: mana_dependent
+    roles: [core]
+    items: [diffusal_blade, disperser, devastator]
+    reason: "выжигание маны и урон по мане"
+  - tag: pushers
+    roles: [support]
+    items: [boots_of_bearing, guardian_greaves, crimson_guard]
+    reason: "командные предметы для защиты башен"
+  - tag: root_leash
+    roles: [core]
+    items: [manta, black_king_bar]
+    reason: "Manta и BKB снимают рут"
+  - tag: bkb_pierce_ult
+    roles: [core]
+    items: [aeon_disk, sphere, blink]
+    reason: "BKB не спасёт: Aeon Disk, Linken или позиция"
+
+# Reactions to an item the enemy has (seen by scout / realtime / screen).
+enemy_items:
+  butterfly: {items: [monkey_king_bar, bloodthorn], reason: "у врага Butterfly — нужен истинный удар"}
+  black_king_bar: {items: [nullifier, abyssal_blade, sheepstick], reason: "BKB врага: подождать окончания, держать контроль после него"}
+  ghost: {items: [nullifier], reason: "Ghost врага снимается Nullifier"}
+  glimmer_cape: {items: [dust, ward_sentry], reason: "Glimmer даёт невидимость — пыль и сентри"}
+  silver_edge: {items: [dust, ward_sentry], reason: "Silver Edge — невидимость, держать пыль"}
+  satanic: {items: [spirit_vessel, skadi], reason: "лечение Satanic режут Vessel (−70%) и Skadi (−50%)"}
+  heart: {items: [spirit_vessel, skadi], reason: "реген Heart режут Vessel (−70%) и Skadi (−50%)"}
+  blade_mail: {items: [], reason: "Blade Mail врага — не бить его в активке"}
+  aeon_disk: {items: [nullifier], reason: "Aeon Disk снимается Nullifier"}
+  sphere: {items: [rod_of_atos, cyclone], reason: "Linken сбивается дешёвым точечным заклинанием"}
+  manta: {items: [mjollnir, bfury], reason: "иллюзии Manta — урон по площади"}
+  blink: {items: [orchid, sheepstick, rod_of_atos], reason: "у врага Blink — сайленс или контроль раньше прыжка"}
+  radiance: {items: [], reason: "Radiance врага — не фармить рядом, уклонение не спасает от урона ауры"}
+  assault: {items: [desolator, silver_edge], reason: "много брони — минус броня"}

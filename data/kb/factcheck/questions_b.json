@@ -1,0 +1,2949 @@
+{
+ "patch": "7.41f",
+ "seed": 2026,
+ "bank": "b",
+ "kb_built": "2026-10-01T20:13:03+00:00",
+ "count": 155,
+ "counts": {
+  "items": 45,
+  "abilities": 45,
+  "heroes": 20,
+  "talents": 10,
+  "mechanics": 35
+ },
+ "questions": [
+  {
+   "id": "item_cost.lotus_orb",
+   "category": "items",
+   "subtype": "item_cost",
+   "question": "Сколько золота стоит предмет Lotus Orb в патче 7.41f (полная цена, с рецептом)?",
+   "answer": 3850,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cost",
+    "item": "lotus_orb"
+   },
+   "items": [
+    "lotus_orb"
+   ]
+  },
+  {
+   "id": "item_cost.dagon_3",
+   "category": "items",
+   "subtype": "item_cost",
+   "question": "Сколько золота стоит предмет Dagon в патче 7.41f (полная цена, с рецептом)?",
+   "answer": 5200,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cost",
+    "item": "dagon_3"
+   },
+   "items": [
+    "dagon_3"
+   ]
+  },
+  {
+   "id": "item_cost.aghanims_shard",
+   "category": "items",
+   "subtype": "item_cost",
+   "question": "Сколько золота стоит предмет Aghanim's Shard в патче 7.41f (полная цена, с рецептом)?",
+   "answer": 1400,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cost",
+    "item": "aghanims_shard"
+   },
+   "items": [
+    "aghanims_shard"
+   ]
+  },
+  {
+   "id": "item_cost.soul_booster",
+   "category": "items",
+   "subtype": "item_cost",
+   "question": "Сколько золота стоит предмет Soul Booster в патче 7.41f (полная цена, с рецептом)?",
+   "answer": 3000,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cost",
+    "item": "soul_booster"
+   },
+   "items": [
+    "soul_booster"
+   ]
+  },
+  {
+   "id": "item_cost.moon_shard",
+   "category": "items",
+   "subtype": "item_cost",
+   "question": "Сколько золота стоит предмет Moon Shard в патче 7.41f (полная цена, с рецептом)?",
+   "answer": 4000,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cost",
+    "item": "moon_shard"
+   },
+   "items": [
+    "moon_shard"
+   ]
+  },
+  {
+   "id": "item_cost.crimson_guard",
+   "category": "items",
+   "subtype": "item_cost",
+   "question": "Сколько золота стоит предмет Crimson Guard в патче 7.41f (полная цена, с рецептом)?",
+   "answer": 3725,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cost",
+    "item": "crimson_guard"
+   },
+   "items": [
+    "crimson_guard"
+   ]
+  },
+  {
+   "id": "item_cost.aether_lens",
+   "category": "items",
+   "subtype": "item_cost",
+   "question": "Сколько золота стоит предмет Aether Lens в патче 7.41f (полная цена, с рецептом)?",
+   "answer": 2275,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cost",
+    "item": "aether_lens"
+   },
+   "items": [
+    "aether_lens"
+   ]
+  },
+  {
+   "id": "item_components.radiance",
+   "category": "items",
+   "subtype": "item_components",
+   "question": "Из каких предметов собирается Radiance в патче 7.41f? Назови готовые предметы-компоненты без свитка рецепта.",
+   "answer": [
+    "relic",
+    "talisman_of_evasion"
+   ],
+   "answer_type": "items_set",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_components",
+    "item": "radiance"
+   },
+   "items": [
+    "radiance"
+   ]
+  },
+  {
+   "id": "item_components.mekansm",
+   "category": "items",
+   "subtype": "item_components",
+   "question": "Из каких предметов собирается Mekansm в патче 7.41f? Назови готовые предметы-компоненты без свитка рецепта.",
+   "answer": [
+    "chainmail",
+    "headdress"
+   ],
+   "answer_type": "items_set",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_components",
+    "item": "mekansm"
+   },
+   "items": [
+    "mekansm"
+   ]
+  },
+  {
+   "id": "item_components.yasha",
+   "category": "items",
+   "subtype": "item_components",
+   "question": "Из каких предметов собирается Yasha в патче 7.41f? Назови готовые предметы-компоненты без свитка рецепта.",
+   "answer": [
+    "blade_of_alacrity",
+    "boots_of_elves"
+   ],
+   "answer_type": "items_set",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_components",
+    "item": "yasha"
+   },
+   "items": [
+    "yasha"
+   ]
+  },
+  {
+   "id": "item_components.ultimate_scepter",
+   "category": "items",
+   "subtype": "item_components",
+   "question": "Из каких предметов собирается Aghanim's Scepter в патче 7.41f? Назови готовые предметы-компоненты без свитка рецепта.",
+   "answer": [
+    "blade_of_alacrity",
+    "ogre_axe",
+    "point_booster",
+    "staff_of_wizardry"
+   ],
+   "answer_type": "items_set",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_components",
+    "item": "ultimate_scepter"
+   },
+   "items": [
+    "ultimate_scepter"
+   ]
+  },
+  {
+   "id": "item_components.vanguard",
+   "category": "items",
+   "subtype": "item_components",
+   "question": "Из каких предметов собирается Vanguard в патче 7.41f? Назови готовые предметы-компоненты без свитка рецепта.",
+   "answer": [
+    "ring_of_health",
+    "vitality_booster"
+   ],
+   "answer_type": "items_set",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_components",
+    "item": "vanguard"
+   },
+   "items": [
+    "vanguard"
+   ]
+  },
+  {
+   "id": "item_components.tranquil_boots",
+   "category": "items",
+   "subtype": "item_components",
+   "question": "Из каких предметов собирается Tranquil Boots в патче 7.41f? Назови готовые предметы-компоненты без свитка рецепта.",
+   "answer": [
+    "boots",
+    "ring_of_regen",
+    "wind_lace"
+   ],
+   "answer_type": "items_set",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_components",
+    "item": "tranquil_boots"
+   },
+   "items": [
+    "tranquil_boots"
+   ]
+  },
+  {
+   "id": "item_components.manta",
+   "category": "items",
+   "subtype": "item_components",
+   "question": "Из каких предметов собирается Manta Style в патче 7.41f? Назови готовые предметы-компоненты без свитка рецепта.",
+   "answer": [
+    "diadem",
+    "yasha"
+   ],
+   "answer_type": "items_set",
+   "tolerance": 0,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_components",
+    "item": "manta"
+   },
+   "items": [
+    "manta"
+   ]
+  },
+  {
+   "id": "item_cooldown.guardian_greaves",
+   "category": "items",
+   "subtype": "item_cooldown",
+   "question": "Какова перезарядка активной способности предмета Guardian Greaves в секундах?",
+   "answer": 45.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cooldown",
+    "item": "guardian_greaves"
+   },
+   "items": [
+    "guardian_greaves"
+   ]
+  },
+  {
+   "id": "item_cooldown.helm_of_the_dominator",
+   "category": "items",
+   "subtype": "item_cooldown",
+   "question": "Какова перезарядка активной способности предмета Helm of the Dominator в секундах?",
+   "answer": 45.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cooldown",
+    "item": "helm_of_the_dominator"
+   },
+   "items": [
+    "helm_of_the_dominator"
+   ]
+  },
+  {
+   "id": "item_cooldown.bottle",
+   "category": "items",
+   "subtype": "item_cooldown",
+   "question": "Какова перезарядка активной способности предмета Bottle в секундах?",
+   "answer": 0.5,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cooldown",
+    "item": "bottle"
+   },
+   "items": [
+    "bottle"
+   ]
+  },
+  {
+   "id": "item_cooldown.satanic",
+   "category": "items",
+   "subtype": "item_cooldown",
+   "question": "Какова перезарядка активной способности предмета Satanic в секундах?",
+   "answer": 40.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cooldown",
+    "item": "satanic"
+   },
+   "items": [
+    "satanic"
+   ]
+  },
+  {
+   "id": "item_cooldown.essence_distiller",
+   "category": "items",
+   "subtype": "item_cooldown",
+   "question": "Какова перезарядка активной способности предмета Essence Distiller в секундах?",
+   "answer": 10.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cooldown",
+    "item": "essence_distiller"
+   },
+   "items": [
+    "essence_distiller"
+   ]
+  },
+  {
+   "id": "item_cooldown.abyssal_blade",
+   "category": "items",
+   "subtype": "item_cooldown",
+   "question": "Какова перезарядка активной способности предмета Abyssal Blade в секундах?",
+   "answer": 35.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cooldown",
+    "item": "abyssal_blade"
+   },
+   "items": [
+    "abyssal_blade"
+   ]
+  },
+  {
+   "id": "item_cooldown.force_staff",
+   "category": "items",
+   "subtype": "item_cooldown",
+   "question": "Какова перезарядка активной способности предмета Force Staff в секундах?",
+   "answer": 19.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_cooldown",
+    "item": "force_staff"
+   },
+   "items": [
+    "force_staff"
+   ]
+  },
+  {
+   "id": "item_bonus.witch_blade",
+   "category": "items",
+   "subtype": "item_bonus",
+   "question": "Сколько даёт предмет Witch Blade по бонусу «Mana Regen»? Нужно число (плоский бонус предмета, без сборных вариантов).",
+   "answer": 1.5,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_bonus",
+    "item": "witch_blade",
+    "index": 2
+   },
+   "items": [
+    "witch_blade"
+   ]
+  },
+  {
+   "id": "item_bonus.wraith_band",
+   "category": "items",
+   "subtype": "item_bonus",
+   "question": "Сколько даёт предмет Wraith Band по бонусу «Intelligence»? Нужно число (плоский бонус предмета, без сборных вариантов).",
+   "answer": 2.0,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_bonus",
+    "item": "wraith_band",
+    "index": 2
+   },
+   "items": [
+    "wraith_band"
+   ]
+  },
+  {
+   "id": "item_bonus.heart",
+   "category": "items",
+   "subtype": "item_bonus",
+   "question": "Сколько даёт предмет Heart of Tarrasque по бонусу «Strength»? Нужно число (плоский бонус предмета, без сборных вариантов).",
+   "answer": 40.0,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_bonus",
+    "item": "heart",
+    "index": 0
+   },
+   "items": [
+    "heart"
+   ]
+  },
+  {
+   "id": "item_bonus.urn_of_shadows",
+   "category": "items",
+   "subtype": "item_bonus",
+   "question": "Сколько даёт предмет Urn of Shadows по бонусу «Mana Regen»? Нужно число (плоский бонус предмета, без сборных вариантов).",
+   "answer": 1.0,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_bonus",
+    "item": "urn_of_shadows",
+    "index": 0
+   },
+   "items": [
+    "urn_of_shadows"
+   ]
+  },
+  {
+   "id": "item_bonus.ghost",
+   "category": "items",
+   "subtype": "item_bonus",
+   "question": "Сколько даёт предмет Ghost Scepter по бонусу «All Attributes»? Нужно число (плоский бонус предмета, без сборных вариантов).",
+   "answer": 5.0,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_bonus",
+    "item": "ghost",
+    "index": 0
+   },
+   "items": [
+    "ghost"
+   ]
+  },
+  {
+   "id": "item_bonus.ethereal_blade",
+   "category": "items",
+   "subtype": "item_bonus",
+   "question": "Сколько даёт предмет Ethereal Blade по бонусу «All Attributes»? Нужно число (плоский бонус предмета, без сборных вариантов).",
+   "answer": 24.0,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_bonus",
+    "item": "ethereal_blade",
+    "index": 0
+   },
+   "items": [
+    "ethereal_blade"
+   ]
+  },
+  {
+   "id": "item_bonus.shivas_guard",
+   "category": "items",
+   "subtype": "item_bonus",
+   "question": "Сколько даёт предмет Shiva's Guard по бонусу «Armor»? Нужно число (плоский бонус предмета, без сборных вариантов).",
+   "answer": 17.0,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_bonus",
+    "item": "shivas_guard",
+    "index": 0
+   },
+   "items": [
+    "shivas_guard"
+   ]
+  },
+  {
+   "id": "item_duration.soul_ring",
+   "category": "items",
+   "subtype": "item_duration",
+   "question": "Сколько секунд длится основной эффект активной способности предмета Soul Ring (параметр «duration» в данных)?",
+   "answer": 10.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_duration",
+    "item": "soul_ring",
+    "special": "duration"
+   },
+   "items": [
+    "soul_ring"
+   ]
+  },
+  {
+   "id": "item_duration.pipe",
+   "category": "items",
+   "subtype": "item_duration",
+   "question": "Сколько секунд длится основной эффект активной способности предмета Pipe of Insight (параметр «barrier_duration» в данных)?",
+   "answer": 8.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_duration",
+    "item": "pipe",
+    "special": "barrier_duration"
+   },
+   "items": [
+    "pipe"
+   ]
+  },
+  {
+   "id": "item_duration.swift_blink",
+   "category": "items",
+   "subtype": "item_duration",
+   "question": "Сколько секунд длится основной эффект активной способности предмета Swift Blink (параметр «duration» в данных)?",
+   "answer": 6.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_duration",
+    "item": "swift_blink",
+    "special": "duration"
+   },
+   "items": [
+    "swift_blink"
+   ]
+  },
+  {
+   "id": "item_duration.sphere",
+   "category": "items",
+   "subtype": "item_duration",
+   "question": "Сколько секунд длится основной эффект активной способности предмета Linken's Sphere (параметр «upgrade_absorb_duration» в данных)?",
+   "answer": 10.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_duration",
+    "item": "sphere",
+    "special": "upgrade_absorb_duration"
+   },
+   "items": [
+    "sphere"
+   ]
+  },
+  {
+   "id": "item_duration.holy_locket",
+   "category": "items",
+   "subtype": "item_duration",
+   "question": "Сколько секунд длится основной эффект активной способности предмета Holy Locket (параметр «active_buff_duration» в данных)?",
+   "answer": 4.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed items",
+   "ref": {
+    "kind": "item_duration",
+    "item": "holy_locket",
+    "special": "active_buff_duration"
+   },
+   "items": [
+    "holy_locket"
+   ]
+  },
+  {
+   "id": "item_in_shop.butterfly",
+   "category": "items",
+   "subtype": "item_in_shop",
+   "question": "Можно ли в патче 7.41f купить Butterfly в магазине? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items shop.status",
+   "ref": {
+    "kind": "item_in_shop",
+    "item": "butterfly"
+   },
+   "items": [
+    "butterfly"
+   ]
+  },
+  {
+   "id": "item_in_shop.roshans_banner",
+   "category": "items",
+   "subtype": "item_in_shop",
+   "question": "Можно ли в патче 7.41f купить Roshan's Banner в магазине? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items shop.status",
+   "ref": {
+    "kind": "item_in_shop",
+    "item": "roshans_banner"
+   },
+   "items": [
+    "roshans_banner"
+   ]
+  },
+  {
+   "id": "item_in_shop.kaya_and_sange",
+   "category": "items",
+   "subtype": "item_in_shop",
+   "question": "Можно ли в патче 7.41f купить Kaya and Sange в магазине? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items shop.status",
+   "ref": {
+    "kind": "item_in_shop",
+    "item": "kaya_and_sange"
+   },
+   "items": [
+    "kaya_and_sange"
+   ]
+  },
+  {
+   "id": "item_in_shop.ring_of_basilius",
+   "category": "items",
+   "subtype": "item_in_shop",
+   "question": "Можно ли в патче 7.41f купить Ring of Basilius в магазине? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items shop.status",
+   "ref": {
+    "kind": "item_in_shop",
+    "item": "ring_of_basilius"
+   },
+   "items": [
+    "ring_of_basilius"
+   ]
+  },
+  {
+   "id": "item_in_shop.aegis",
+   "category": "items",
+   "subtype": "item_in_shop",
+   "question": "Можно ли в патче 7.41f купить Aegis of the Immortal в магазине? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items shop.status",
+   "ref": {
+    "kind": "item_in_shop",
+    "item": "aegis"
+   },
+   "items": [
+    "aegis"
+   ]
+  },
+  {
+   "id": "item_in_shop.aeon_disk",
+   "category": "items",
+   "subtype": "item_in_shop",
+   "question": "Можно ли в патче 7.41f купить Aeon Disk в магазине? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items shop.status",
+   "ref": {
+    "kind": "item_in_shop",
+    "item": "aeon_disk"
+   },
+   "items": [
+    "aeon_disk"
+   ]
+  },
+  {
+   "id": "item_in_shop.famango",
+   "category": "items",
+   "subtype": "item_in_shop",
+   "question": "Можно ли в патче 7.41f купить Healing Lotus в магазине? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items shop.status",
+   "ref": {
+    "kind": "item_in_shop",
+    "item": "famango"
+   },
+   "items": [
+    "famango"
+   ]
+  },
+  {
+   "id": "item_pierce.devastator",
+   "category": "items",
+   "subtype": "item_pierce",
+   "question": "Пробивает ли иммунитет к дебаффам (BKB) основной эффект предмета Parasma в патче 7.41f? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items bkb_pierce",
+   "ref": {
+    "kind": "item_pierce",
+    "item": "devastator"
+   },
+   "items": [
+    "devastator"
+   ]
+  },
+  {
+   "id": "item_pierce.meteor_hammer",
+   "category": "items",
+   "subtype": "item_pierce",
+   "question": "Пробивает ли иммунитет к дебаффам (BKB) основной эффект предмета Meteor Hammer в патче 7.41f? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items bkb_pierce",
+   "ref": {
+    "kind": "item_pierce",
+    "item": "meteor_hammer"
+   },
+   "items": [
+    "meteor_hammer"
+   ]
+  },
+  {
+   "id": "item_pierce.pavise",
+   "category": "items",
+   "subtype": "item_pierce",
+   "question": "Пробивает ли иммунитет к дебаффам (BKB) основной эффект предмета Pavise в патче 7.41f? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items bkb_pierce",
+   "ref": {
+    "kind": "item_pierce",
+    "item": "pavise"
+   },
+   "items": [
+    "pavise"
+   ]
+  },
+  {
+   "id": "item_pierce.revenants_brooch",
+   "category": "items",
+   "subtype": "item_pierce",
+   "question": "Пробивает ли иммунитет к дебаффам (BKB) основной эффект предмета Revenant's Brooch в патче 7.41f? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items bkb_pierce",
+   "ref": {
+    "kind": "item_pierce",
+    "item": "revenants_brooch"
+   },
+   "items": [
+    "revenants_brooch"
+   ]
+  },
+  {
+   "id": "item_pierce.solar_crest",
+   "category": "items",
+   "subtype": "item_pierce",
+   "question": "Пробивает ли иммунитет к дебаффам (BKB) основной эффект предмета Solar Crest в патче 7.41f? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed items bkb_pierce",
+   "ref": {
+    "kind": "item_pierce",
+    "item": "solar_crest"
+   },
+   "items": [
+    "solar_crest"
+   ]
+  },
+  {
+   "id": "ability_pierce.batrider_flaming_lasso",
+   "category": "abilities",
+   "subtype": "ability_pierce",
+   "question": "Пробивает ли способность Flaming Lasso героя Batrider иммунитет к дебаффам (BKB) в патче 7.41f? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities bkb_pierce",
+   "ref": {
+    "kind": "ability_pierce",
+    "ability": "batrider_flaming_lasso"
+   },
+   "hero": "batrider"
+  },
+  {
+   "id": "ability_pierce.windrunner_focusfire",
+   "category": "abilities",
+   "subtype": "ability_pierce",
+   "question": "Пробивает ли способность Focus Fire героя Windranger иммунитет к дебаффам (BKB) в патче 7.41f? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities bkb_pierce",
+   "ref": {
+    "kind": "ability_pierce",
+    "ability": "windrunner_focusfire"
+   },
+   "hero": "windrunner"
+  },
+  {
+   "id": "ability_pierce.winter_wyvern_winters_curse",
+   "category": "abilities",
+   "subtype": "ability_pierce",
+   "question": "Пробивает ли способность Winter's Curse героя Winter Wyvern иммунитет к дебаффам (BKB) в патче 7.41f? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities bkb_pierce",
+   "ref": {
+    "kind": "ability_pierce",
+    "ability": "winter_wyvern_winters_curse"
+   },
+   "hero": "winter_wyvern"
+  },
+  {
+   "id": "ability_pierce.spectre_shadow_step",
+   "category": "abilities",
+   "subtype": "ability_pierce",
+   "question": "Пробивает ли способность Shadow Step героя Spectre иммунитет к дебаффам (BKB) в патче 7.41f? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities bkb_pierce",
+   "ref": {
+    "kind": "ability_pierce",
+    "ability": "spectre_shadow_step"
+   },
+   "hero": "spectre"
+  },
+  {
+   "id": "ability_pierce.witch_doctor_paralyzing_cask",
+   "category": "abilities",
+   "subtype": "ability_pierce",
+   "question": "Пробивает ли способность Paralyzing Cask героя Witch Doctor иммунитет к дебаффам (BKB) в патче 7.41f? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities bkb_pierce",
+   "ref": {
+    "kind": "ability_pierce",
+    "ability": "witch_doctor_paralyzing_cask"
+   },
+   "hero": "witch_doctor"
+  },
+  {
+   "id": "ability_pierce.beastmaster_wild_axes",
+   "category": "abilities",
+   "subtype": "ability_pierce",
+   "question": "Пробивает ли способность Wild Axes героя Beastmaster иммунитет к дебаффам (BKB) в патче 7.41f? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities bkb_pierce",
+   "ref": {
+    "kind": "ability_pierce",
+    "ability": "beastmaster_wild_axes"
+   },
+   "hero": "beastmaster"
+  },
+  {
+   "id": "ability_pierce.dark_willow_cursed_crown",
+   "category": "abilities",
+   "subtype": "ability_pierce",
+   "question": "Пробивает ли способность Cursed Crown героя Dark Willow иммунитет к дебаффам (BKB) в патче 7.41f? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities bkb_pierce",
+   "ref": {
+    "kind": "ability_pierce",
+    "ability": "dark_willow_cursed_crown"
+   },
+   "hero": "dark_willow"
+  },
+  {
+   "id": "ability_pierce.sandking_burrowstrike",
+   "category": "abilities",
+   "subtype": "ability_pierce",
+   "question": "Пробивает ли способность Burrowstrike героя Sand King иммунитет к дебаффам (BKB) в патче 7.41f? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities bkb_pierce",
+   "ref": {
+    "kind": "ability_pierce",
+    "ability": "sandking_burrowstrike"
+   },
+   "hero": "sand_king"
+  },
+  {
+   "id": "ability_damage_type.tiny_tree_grab",
+   "category": "abilities",
+   "subtype": "ability_damage_type",
+   "question": "Какой тип урона наносит способность Tree Grab героя Tiny? Варианты: physical — физический; magical — магический; pure — чистый.",
+   "answer": "physical",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed abilities damage_type",
+   "options": [
+    {
+     "key": "physical",
+     "text": "физический"
+    },
+    {
+     "key": "magical",
+     "text": "магический"
+    },
+    {
+     "key": "pure",
+     "text": "чистый"
+    }
+   ],
+   "ref": {
+    "kind": "ability_damage_type",
+    "ability": "tiny_tree_grab"
+   },
+   "hero": "tiny"
+  },
+  {
+   "id": "ability_damage_type.bristleback_quill_spray",
+   "category": "abilities",
+   "subtype": "ability_damage_type",
+   "question": "Какой тип урона наносит способность Quill Spray героя Bristleback? Варианты: physical — физический; magical — магический; pure — чистый.",
+   "answer": "physical",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed abilities damage_type",
+   "options": [
+    {
+     "key": "physical",
+     "text": "физический"
+    },
+    {
+     "key": "magical",
+     "text": "магический"
+    },
+    {
+     "key": "pure",
+     "text": "чистый"
+    }
+   ],
+   "ref": {
+    "kind": "ability_damage_type",
+    "ability": "bristleback_quill_spray"
+   },
+   "hero": "bristleback"
+  },
+  {
+   "id": "ability_damage_type.chen_penitence",
+   "category": "abilities",
+   "subtype": "ability_damage_type",
+   "question": "Какой тип урона наносит способность Penitence героя Chen? Варианты: physical — физический; magical — магический; pure — чистый.",
+   "answer": "pure",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed abilities damage_type",
+   "options": [
+    {
+     "key": "physical",
+     "text": "физический"
+    },
+    {
+     "key": "magical",
+     "text": "магический"
+    },
+    {
+     "key": "pure",
+     "text": "чистый"
+    }
+   ],
+   "ref": {
+    "kind": "ability_damage_type",
+    "ability": "chen_penitence"
+   },
+   "hero": "chen"
+  },
+  {
+   "id": "ability_damage_type.leshrac_diabolic_edict",
+   "category": "abilities",
+   "subtype": "ability_damage_type",
+   "question": "Какой тип урона наносит способность Diabolic Edict героя Leshrac? Варианты: physical — физический; magical — магический; pure — чистый.",
+   "answer": "pure",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed abilities damage_type",
+   "options": [
+    {
+     "key": "physical",
+     "text": "физический"
+    },
+    {
+     "key": "magical",
+     "text": "магический"
+    },
+    {
+     "key": "pure",
+     "text": "чистый"
+    }
+   ],
+   "ref": {
+    "kind": "ability_damage_type",
+    "ability": "leshrac_diabolic_edict"
+   },
+   "hero": "leshrac"
+  },
+  {
+   "id": "ability_damage_type.tiny_toss",
+   "category": "abilities",
+   "subtype": "ability_damage_type",
+   "question": "Какой тип урона наносит способность Toss героя Tiny? Варианты: physical — физический; magical — магический; pure — чистый.",
+   "answer": "magical",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed abilities damage_type",
+   "options": [
+    {
+     "key": "physical",
+     "text": "физический"
+    },
+    {
+     "key": "magical",
+     "text": "магический"
+    },
+    {
+     "key": "pure",
+     "text": "чистый"
+    }
+   ],
+   "ref": {
+    "kind": "ability_damage_type",
+    "ability": "tiny_toss"
+   },
+   "hero": "tiny"
+  },
+  {
+   "id": "ability_dispel.phantom_assassin_stifling_dagger",
+   "category": "abilities",
+   "subtype": "ability_dispel",
+   "question": "Можно ли снять эффект способности Stifling Dagger героя Phantom Assassin с цели обычным (базовым) диспелом? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities dispellable",
+   "ref": {
+    "kind": "ability_dispel",
+    "ability": "phantom_assassin_stifling_dagger"
+   },
+   "hero": "phantom_assassin"
+  },
+  {
+   "id": "ability_dispel.snapfire_scatterblast",
+   "category": "abilities",
+   "subtype": "ability_dispel",
+   "question": "Можно ли снять эффект способности Scatterblast героя Snapfire с цели обычным (базовым) диспелом? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities dispellable",
+   "ref": {
+    "kind": "ability_dispel",
+    "ability": "snapfire_scatterblast"
+   },
+   "hero": "snapfire"
+  },
+  {
+   "id": "ability_dispel.tinker_laser",
+   "category": "abilities",
+   "subtype": "ability_dispel",
+   "question": "Можно ли снять эффект способности Laser героя Tinker с цели обычным (базовым) диспелом? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities dispellable",
+   "ref": {
+    "kind": "ability_dispel",
+    "ability": "tinker_laser"
+   },
+   "hero": "tinker"
+  },
+  {
+   "id": "ability_dispel.necrolyte_reapers_scythe",
+   "category": "abilities",
+   "subtype": "ability_dispel",
+   "question": "Можно ли снять эффект способности Reaper's Scythe героя Necrophos с цели обычным (базовым) диспелом? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities dispellable",
+   "ref": {
+    "kind": "ability_dispel",
+    "ability": "necrolyte_reapers_scythe"
+   },
+   "hero": "necrolyte"
+  },
+  {
+   "id": "ability_dispel.pugna_life_drain",
+   "category": "abilities",
+   "subtype": "ability_dispel",
+   "question": "Можно ли снять эффект способности Life Drain героя Pugna с цели обычным (базовым) диспелом? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities dispellable",
+   "ref": {
+    "kind": "ability_dispel",
+    "ability": "pugna_life_drain"
+   },
+   "hero": "pugna"
+  },
+  {
+   "id": "ability_dispel.leshrac_split_earth",
+   "category": "abilities",
+   "subtype": "ability_dispel",
+   "question": "Можно ли снять эффект способности Split Earth героя Leshrac с цели обычным (базовым) диспелом? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities dispellable",
+   "ref": {
+    "kind": "ability_dispel",
+    "ability": "leshrac_split_earth"
+   },
+   "hero": "leshrac"
+  },
+  {
+   "id": "ability_dispel.storm_spirit_electric_vortex",
+   "category": "abilities",
+   "subtype": "ability_dispel",
+   "question": "Можно ли снять эффект способности Electric Vortex героя Storm Spirit с цели обычным (базовым) диспелом? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed abilities dispellable",
+   "ref": {
+    "kind": "ability_dispel",
+    "ability": "storm_spirit_electric_vortex"
+   },
+   "hero": "storm_spirit"
+  },
+  {
+   "id": "ability_cooldown.rattletrap_battery_assault",
+   "category": "abilities",
+   "subtype": "ability_cooldown",
+   "question": "Какова перезарядка способности Battery Assault героя Clockwerk на 1-м уровне прокачки в секундах (без талантов, Аганима и шарда)?",
+   "answer": 24.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed abilities cooldown",
+   "ref": {
+    "kind": "ability_cooldown",
+    "ability": "rattletrap_battery_assault",
+    "level": 1
+   },
+   "hero": "rattletrap"
+  },
+  {
+   "id": "ability_cooldown.lich_chain_frost",
+   "category": "abilities",
+   "subtype": "ability_cooldown",
+   "question": "Какова перезарядка способности Chain Frost героя Lich на 1-м уровне прокачки в секундах (без талантов, Аганима и шарда)?",
+   "answer": 100.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed abilities cooldown",
+   "ref": {
+    "kind": "ability_cooldown",
+    "ability": "lich_chain_frost",
+    "level": 1
+   },
+   "hero": "lich"
+  },
+  {
+   "id": "ability_cooldown.zuus_heavenly_jump",
+   "category": "abilities",
+   "subtype": "ability_cooldown",
+   "question": "Какова перезарядка способности Heavenly Jump героя Zeus на 2-м уровне прокачки в секундах (без талантов, Аганима и шарда)?",
+   "answer": 22.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed abilities cooldown",
+   "ref": {
+    "kind": "ability_cooldown",
+    "ability": "zuus_heavenly_jump",
+    "level": 2
+   },
+   "hero": "zuus"
+  },
+  {
+   "id": "ability_cooldown.dragon_knight_breathe_fire",
+   "category": "abilities",
+   "subtype": "ability_cooldown",
+   "question": "Какова перезарядка способности Breathe Fire героя Dragon Knight на 2-м уровне прокачки в секундах (без талантов, Аганима и шарда)?",
+   "answer": 13.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed abilities cooldown",
+   "ref": {
+    "kind": "ability_cooldown",
+    "ability": "dragon_knight_breathe_fire",
+    "level": 2
+   },
+   "hero": "dragon_knight"
+  },
+  {
+   "id": "ability_cooldown.windrunner_windrun",
+   "category": "abilities",
+   "subtype": "ability_cooldown",
+   "question": "Какова перезарядка способности Windrun героя Windranger на 4-м уровне прокачки в секундах (без талантов, Аганима и шарда)?",
+   "answer": 11.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed abilities cooldown",
+   "ref": {
+    "kind": "ability_cooldown",
+    "ability": "windrunner_windrun",
+    "level": 4
+   },
+   "hero": "windrunner"
+  },
+  {
+   "id": "ability_cooldown.wisp_relocate",
+   "category": "abilities",
+   "subtype": "ability_cooldown",
+   "question": "Какова перезарядка способности Relocate героя Io на 3-м уровне прокачки в секундах (без талантов, Аганима и шарда)?",
+   "answer": 70.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed abilities cooldown",
+   "ref": {
+    "kind": "ability_cooldown",
+    "ability": "wisp_relocate",
+    "level": 3
+   },
+   "hero": "wisp"
+  },
+  {
+   "id": "ability_mana.necrolyte_death_pulse",
+   "category": "abilities",
+   "subtype": "ability_mana",
+   "question": "Сколько маны стоит способность Death Pulse героя Necrophos на 2-м уровне прокачки (без талантов и модификаторов)?",
+   "answer": 130.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed abilities mana_cost",
+   "ref": {
+    "kind": "ability_mana",
+    "ability": "necrolyte_death_pulse",
+    "level": 2
+   },
+   "hero": "necrolyte"
+  },
+  {
+   "id": "ability_mana.ember_spirit_searing_chains",
+   "category": "abilities",
+   "subtype": "ability_mana",
+   "question": "Сколько маны стоит способность Searing Chains героя Ember Spirit на 2-м уровне прокачки (без талантов и модификаторов)?",
+   "answer": 90.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed abilities mana_cost",
+   "ref": {
+    "kind": "ability_mana",
+    "ability": "ember_spirit_searing_chains",
+    "level": 2
+   },
+   "hero": "ember_spirit"
+  },
+  {
+   "id": "ability_mana.witch_doctor_maledict",
+   "category": "abilities",
+   "subtype": "ability_mana",
+   "question": "Сколько маны стоит способность Maledict героя Witch Doctor на 1-м уровне прокачки (без талантов и модификаторов)?",
+   "answer": 105.0,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "datafeed abilities mana_cost",
+   "ref": {
+    "kind": "ability_mana",
+    "ability": "witch_doctor_maledict",
+    "level": 1
+   },
+   "hero": "witch_doctor"
+  },
+  {
+   "id": "ability_special.night_stalker_midnight_feast",
+   "category": "abilities",
+   "subtype": "ability_special",
+   "question": "Способность Midnight Feast героя Night Stalker: чему равно значение «MAX MANA RESTORE» на 4-м уровне прокачки (в процентах, число без знака)?",
+   "answer": 16.0,
+   "answer_type": "number",
+   "tolerance": 0.02,
+   "source": "datafeed abilities specials",
+   "ref": {
+    "kind": "ability_special",
+    "ability": "night_stalker_midnight_feast",
+    "special": "mp_restore",
+    "level": 4
+   },
+   "hero": "night_stalker"
+  },
+  {
+   "id": "ability_special.luna_lunar_orbit",
+   "category": "abilities",
+   "subtype": "ability_special",
+   "question": "Способность Lunar Orbit героя Luna: чему равно значение «DURATION» на 1-м уровне прокачки?",
+   "answer": 5.0,
+   "answer_type": "number",
+   "tolerance": 0.02,
+   "source": "datafeed abilities specials",
+   "ref": {
+    "kind": "ability_special",
+    "ability": "luna_lunar_orbit",
+    "special": "rotating_glaives_duration",
+    "level": 1
+   },
+   "hero": "luna"
+  },
+  {
+   "id": "ability_special.slardar_sprint",
+   "category": "abilities",
+   "subtype": "ability_special",
+   "question": "Способность Guardian Sprint героя Slardar: чему равно значение «BONUS MOVE SPEED» на 2-м уровне прокачки (в процентах, число без знака)?",
+   "answer": 18.0,
+   "answer_type": "number",
+   "tolerance": 0.02,
+   "source": "datafeed abilities specials",
+   "ref": {
+    "kind": "ability_special",
+    "ability": "slardar_sprint",
+    "special": "bonus_speed",
+    "level": 2
+   },
+   "hero": "slardar"
+  },
+  {
+   "id": "ability_special.rubick_fade_bolt",
+   "category": "abilities",
+   "subtype": "ability_special",
+   "question": "Способность Fade Bolt героя Rubick: чему равно значение «DAMAGE» на 3-м уровне прокачки?",
+   "answer": 245.0,
+   "answer_type": "number",
+   "tolerance": 0.02,
+   "source": "datafeed abilities specials",
+   "ref": {
+    "kind": "ability_special",
+    "ability": "rubick_fade_bolt",
+    "special": "damage",
+    "level": 3
+   },
+   "hero": "rubick"
+  },
+  {
+   "id": "ability_special.pangolier_shield_crash",
+   "category": "abilities",
+   "subtype": "ability_special",
+   "question": "Способность Shield Crash героя Pangolier: чему равно значение «DAMAGE» на 3-м уровне прокачки?",
+   "answer": 180.0,
+   "answer_type": "number",
+   "tolerance": 0.02,
+   "source": "datafeed abilities specials",
+   "ref": {
+    "kind": "ability_special",
+    "ability": "pangolier_shield_crash",
+    "special": "damage",
+    "level": 3
+   },
+   "hero": "pangolier"
+  },
+  {
+   "id": "ability_ultimate.puck",
+   "category": "abilities",
+   "subtype": "ability_ultimate",
+   "question": "Какая из способностей героя Puck — ультимейт? Варианты: A — Waning Rift; B — Dream Coil; C — Phase Shift; D — Illusory Orb.",
+   "answer": "B",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed abilities kind",
+   "options": [
+    {
+     "key": "A",
+     "text": "Waning Rift"
+    },
+    {
+     "key": "B",
+     "text": "Dream Coil"
+    },
+    {
+     "key": "C",
+     "text": "Phase Shift"
+    },
+    {
+     "key": "D",
+     "text": "Illusory Orb"
+    }
+   ],
+   "ref": {
+    "kind": "ability_ultimate",
+    "hero": "puck"
+   },
+   "hero": "puck",
+   "ultimate": "Dream Coil"
+  },
+  {
+   "id": "ability_ultimate.mirana",
+   "category": "abilities",
+   "subtype": "ability_ultimate",
+   "question": "Какая из способностей героя Mirana — ультимейт? Варианты: A — Leap; B — Sacred Arrow; C — Moonlight Shadow; D — Starstorm.",
+   "answer": "C",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed abilities kind",
+   "options": [
+    {
+     "key": "A",
+     "text": "Leap"
+    },
+    {
+     "key": "B",
+     "text": "Sacred Arrow"
+    },
+    {
+     "key": "C",
+     "text": "Moonlight Shadow"
+    },
+    {
+     "key": "D",
+     "text": "Starstorm"
+    }
+   ],
+   "ref": {
+    "kind": "ability_ultimate",
+    "hero": "mirana"
+   },
+   "hero": "mirana",
+   "ultimate": "Moonlight Shadow"
+  },
+  {
+   "id": "ability_ultimate.bristleback",
+   "category": "abilities",
+   "subtype": "ability_ultimate",
+   "question": "Какая из способностей героя Bristleback — ультимейт? Варианты: A — Viscous Nasal Goo; B — Quill Spray; C — Warpath; D — Bristleback.",
+   "answer": "C",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed abilities kind",
+   "options": [
+    {
+     "key": "A",
+     "text": "Viscous Nasal Goo"
+    },
+    {
+     "key": "B",
+     "text": "Quill Spray"
+    },
+    {
+     "key": "C",
+     "text": "Warpath"
+    },
+    {
+     "key": "D",
+     "text": "Bristleback"
+    }
+   ],
+   "ref": {
+    "kind": "ability_ultimate",
+    "hero": "bristleback"
+   },
+   "hero": "bristleback",
+   "ultimate": "Warpath"
+  },
+  {
+   "id": "ability_ultimate.necrolyte",
+   "category": "abilities",
+   "subtype": "ability_ultimate",
+   "question": "Какая из способностей героя Necrophos — ультимейт? Варианты: A — Heartstopper Aura; B — Ghost Shroud; C — Death Pulse; D — Reaper's Scythe.",
+   "answer": "D",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed abilities kind",
+   "options": [
+    {
+     "key": "A",
+     "text": "Heartstopper Aura"
+    },
+    {
+     "key": "B",
+     "text": "Ghost Shroud"
+    },
+    {
+     "key": "C",
+     "text": "Death Pulse"
+    },
+    {
+     "key": "D",
+     "text": "Reaper's Scythe"
+    }
+   ],
+   "ref": {
+    "kind": "ability_ultimate",
+    "hero": "necrolyte"
+   },
+   "hero": "necrolyte",
+   "ultimate": "Reaper's Scythe"
+  },
+  {
+   "id": "ability_ultimate.ancient_apparition",
+   "category": "abilities",
+   "subtype": "ability_ultimate",
+   "question": "Какая из способностей героя Ancient Apparition — ультимейт? Варианты: A — Ice Vortex; B — Chilling Touch; C — Ice Blast; D — Cold Feet.",
+   "answer": "C",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed abilities kind",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ice Vortex"
+    },
+    {
+     "key": "B",
+     "text": "Chilling Touch"
+    },
+    {
+     "key": "C",
+     "text": "Ice Blast"
+    },
+    {
+     "key": "D",
+     "text": "Cold Feet"
+    }
+   ],
+   "ref": {
+    "kind": "ability_ultimate",
+    "hero": "ancient_apparition"
+   },
+   "hero": "ancient_apparition",
+   "ultimate": "Ice Blast"
+  },
+  {
+   "id": "hero_innate.wisp",
+   "category": "abilities",
+   "subtype": "hero_innate",
+   "question": "Как называется врождённая (innate) способность героя Io в патче 7.41f?",
+   "answer": "Equilibrium",
+   "answer_type": "text_key",
+   "tolerance": 0,
+   "source": "datafeed abilities innate",
+   "aliases": [
+    "wisp_equilibrium"
+   ],
+   "ref": {
+    "kind": "hero_innate",
+    "hero": "wisp"
+   },
+   "hero": "wisp"
+  },
+  {
+   "id": "hero_innate.ursa",
+   "category": "abilities",
+   "subtype": "hero_innate",
+   "question": "Как называется врождённая (innate) способность героя Ursa в патче 7.41f?",
+   "answer": "Maul",
+   "answer_type": "text_key",
+   "tolerance": 0,
+   "source": "datafeed abilities innate",
+   "aliases": [
+    "ursa_maul"
+   ],
+   "ref": {
+    "kind": "hero_innate",
+    "hero": "ursa"
+   },
+   "hero": "ursa"
+  },
+  {
+   "id": "hero_innate.abyssal_underlord",
+   "category": "abilities",
+   "subtype": "hero_innate",
+   "question": "Как называется врождённая (innate) способность героя Underlord в патче 7.41f?",
+   "answer": "Invading Force",
+   "answer_type": "text_key",
+   "tolerance": 0,
+   "source": "datafeed abilities innate",
+   "aliases": [
+    "abyssal_underlord_raid_boss"
+   ],
+   "ref": {
+    "kind": "hero_innate",
+    "hero": "abyssal_underlord"
+   },
+   "hero": "abyssal_underlord"
+  },
+  {
+   "id": "hero_innate.chen",
+   "category": "abilities",
+   "subtype": "hero_innate",
+   "question": "Как называется врождённая (innate) способность героя Chen в патче 7.41f?",
+   "answer": "Zealot",
+   "answer_type": "text_key",
+   "tolerance": 0,
+   "source": "datafeed abilities innate",
+   "aliases": [
+    "chen_zealot"
+   ],
+   "ref": {
+    "kind": "hero_innate",
+    "hero": "chen"
+   },
+   "hero": "chen"
+  },
+  {
+   "id": "hero_innate.rubick",
+   "category": "abilities",
+   "subtype": "hero_innate",
+   "question": "Как называется врождённая (innate) способность героя Rubick в патче 7.41f?",
+   "answer": "Curiosity",
+   "answer_type": "text_key",
+   "tolerance": 0,
+   "source": "datafeed abilities innate",
+   "aliases": [
+    "rubick_curiosity"
+   ],
+   "ref": {
+    "kind": "hero_innate",
+    "hero": "rubick"
+   },
+   "hero": "rubick"
+  },
+  {
+   "id": "hero_innate.bristleback",
+   "category": "abilities",
+   "subtype": "hero_innate",
+   "question": "Как называется врождённая (innate) способность героя Bristleback в патче 7.41f?",
+   "answer": "Prickly",
+   "answer_type": "text_key",
+   "tolerance": 0,
+   "source": "datafeed abilities innate",
+   "aliases": [
+    "bristleback_prickly"
+   ],
+   "ref": {
+    "kind": "hero_innate",
+    "hero": "bristleback"
+   },
+   "hero": "bristleback"
+  },
+  {
+   "id": "hero_attr.winter_wyvern",
+   "category": "heroes",
+   "subtype": "hero_attr",
+   "question": "Какой основной атрибут у героя Winter Wyvern? Варианты: str — сила; agi — ловкость; int — интеллект; all — универсал.",
+   "answer": "int",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes primary_attr",
+   "options": [
+    {
+     "key": "str",
+     "text": "сила"
+    },
+    {
+     "key": "agi",
+     "text": "ловкость"
+    },
+    {
+     "key": "int",
+     "text": "интеллект"
+    },
+    {
+     "key": "all",
+     "text": "универсал"
+    }
+   ],
+   "ref": {
+    "kind": "hero_attr",
+    "hero": "winter_wyvern"
+   },
+   "hero": "winter_wyvern"
+  },
+  {
+   "id": "hero_attr.enigma",
+   "category": "heroes",
+   "subtype": "hero_attr",
+   "question": "Какой основной атрибут у героя Enigma? Варианты: str — сила; agi — ловкость; int — интеллект; all — универсал.",
+   "answer": "all",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes primary_attr",
+   "options": [
+    {
+     "key": "str",
+     "text": "сила"
+    },
+    {
+     "key": "agi",
+     "text": "ловкость"
+    },
+    {
+     "key": "int",
+     "text": "интеллект"
+    },
+    {
+     "key": "all",
+     "text": "универсал"
+    }
+   ],
+   "ref": {
+    "kind": "hero_attr",
+    "hero": "enigma"
+   },
+   "hero": "enigma"
+  },
+  {
+   "id": "hero_attr.bristleback",
+   "category": "heroes",
+   "subtype": "hero_attr",
+   "question": "Какой основной атрибут у героя Bristleback? Варианты: str — сила; agi — ловкость; int — интеллект; all — универсал.",
+   "answer": "str",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes primary_attr",
+   "options": [
+    {
+     "key": "str",
+     "text": "сила"
+    },
+    {
+     "key": "agi",
+     "text": "ловкость"
+    },
+    {
+     "key": "int",
+     "text": "интеллект"
+    },
+    {
+     "key": "all",
+     "text": "универсал"
+    }
+   ],
+   "ref": {
+    "kind": "hero_attr",
+    "hero": "bristleback"
+   },
+   "hero": "bristleback"
+  },
+  {
+   "id": "hero_attr.night_stalker",
+   "category": "heroes",
+   "subtype": "hero_attr",
+   "question": "Какой основной атрибут у героя Night Stalker? Варианты: str — сила; agi — ловкость; int — интеллект; all — универсал.",
+   "answer": "str",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes primary_attr",
+   "options": [
+    {
+     "key": "str",
+     "text": "сила"
+    },
+    {
+     "key": "agi",
+     "text": "ловкость"
+    },
+    {
+     "key": "int",
+     "text": "интеллект"
+    },
+    {
+     "key": "all",
+     "text": "универсал"
+    }
+   ],
+   "ref": {
+    "kind": "hero_attr",
+    "hero": "night_stalker"
+   },
+   "hero": "night_stalker"
+  },
+  {
+   "id": "hero_attr.beastmaster",
+   "category": "heroes",
+   "subtype": "hero_attr",
+   "question": "Какой основной атрибут у героя Beastmaster? Варианты: str — сила; agi — ловкость; int — интеллект; all — универсал.",
+   "answer": "all",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes primary_attr",
+   "options": [
+    {
+     "key": "str",
+     "text": "сила"
+    },
+    {
+     "key": "agi",
+     "text": "ловкость"
+    },
+    {
+     "key": "int",
+     "text": "интеллект"
+    },
+    {
+     "key": "all",
+     "text": "универсал"
+    }
+   ],
+   "ref": {
+    "kind": "hero_attr",
+    "hero": "beastmaster"
+   },
+   "hero": "beastmaster"
+  },
+  {
+   "id": "hero_attack_type.tiny",
+   "category": "heroes",
+   "subtype": "hero_attack_type",
+   "question": "Ближний или дальний бой у героя Tiny? Варианты: melee — ближний бой; ranged — дальний бой.",
+   "answer": "melee",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes attack_type",
+   "options": [
+    {
+     "key": "melee",
+     "text": "ближний бой"
+    },
+    {
+     "key": "ranged",
+     "text": "дальний бой"
+    }
+   ],
+   "ref": {
+    "kind": "hero_attack_type",
+    "hero": "tiny"
+   },
+   "hero": "tiny"
+  },
+  {
+   "id": "hero_attack_type.ursa",
+   "category": "heroes",
+   "subtype": "hero_attack_type",
+   "question": "Ближний или дальний бой у героя Ursa? Варианты: melee — ближний бой; ranged — дальний бой.",
+   "answer": "melee",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes attack_type",
+   "options": [
+    {
+     "key": "melee",
+     "text": "ближний бой"
+    },
+    {
+     "key": "ranged",
+     "text": "дальний бой"
+    }
+   ],
+   "ref": {
+    "kind": "hero_attack_type",
+    "hero": "ursa"
+   },
+   "hero": "ursa"
+  },
+  {
+   "id": "hero_attack_type.venomancer",
+   "category": "heroes",
+   "subtype": "hero_attack_type",
+   "question": "Ближний или дальний бой у героя Venomancer? Варианты: melee — ближний бой; ranged — дальний бой.",
+   "answer": "ranged",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes attack_type",
+   "options": [
+    {
+     "key": "melee",
+     "text": "ближний бой"
+    },
+    {
+     "key": "ranged",
+     "text": "дальний бой"
+    }
+   ],
+   "ref": {
+    "kind": "hero_attack_type",
+    "hero": "venomancer"
+   },
+   "hero": "venomancer"
+  },
+  {
+   "id": "hero_bat.huskar",
+   "category": "heroes",
+   "subtype": "hero_bat",
+   "question": "Каково базовое время атаки (BAT) героя Huskar в секундах?",
+   "answer": 1.6,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed heroes attack_rate",
+   "ref": {
+    "kind": "hero_bat",
+    "hero": "huskar"
+   },
+   "hero": "huskar"
+  },
+  {
+   "id": "hero_bat.monkey_king",
+   "category": "heroes",
+   "subtype": "hero_bat",
+   "question": "Каково базовое время атаки (BAT) героя Monkey King в секундах?",
+   "answer": 1.6,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed heroes attack_rate",
+   "ref": {
+    "kind": "hero_bat",
+    "hero": "monkey_king"
+   },
+   "hero": "monkey_king"
+  },
+  {
+   "id": "hero_bat.necrolyte",
+   "category": "heroes",
+   "subtype": "hero_bat",
+   "question": "Каково базовое время атаки (BAT) героя Necrophos в секундах?",
+   "answer": 1.7,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed heroes attack_rate",
+   "ref": {
+    "kind": "hero_bat",
+    "hero": "necrolyte"
+   },
+   "hero": "necrolyte"
+  },
+  {
+   "id": "hero_bat.lone_druid",
+   "category": "heroes",
+   "subtype": "hero_bat",
+   "question": "Каково базовое время атаки (BAT) героя Lone Druid в секундах?",
+   "answer": 1.6,
+   "answer_type": "number",
+   "tolerance": 0.01,
+   "source": "datafeed heroes attack_rate",
+   "ref": {
+    "kind": "hero_bat",
+    "hero": "lone_druid"
+   },
+   "hero": "lone_druid"
+  },
+  {
+   "id": "hero_armor.tinker",
+   "category": "heroes",
+   "subtype": "hero_armor",
+   "question": "Сколько брони у героя Tinker на 1 уровне без предметов (суммарное значение, как в интерфейсе, с учётом ловкости)?",
+   "answer": 4.83,
+   "answer_type": "number",
+   "tolerance": 0.2,
+   "source": "datafeed heroes armor + agi/6",
+   "ref": {
+    "kind": "hero_armor",
+    "hero": "tinker"
+   },
+   "hero": "tinker"
+  },
+  {
+   "id": "hero_armor.hoodwink",
+   "category": "heroes",
+   "subtype": "hero_armor",
+   "question": "Сколько брони у героя Hoodwink на 1 уровне без предметов (суммарное значение, как в интерфейсе, с учётом ловкости)?",
+   "answer": 3.67,
+   "answer_type": "number",
+   "tolerance": 0.2,
+   "source": "datafeed heroes armor + agi/6",
+   "ref": {
+    "kind": "hero_armor",
+    "hero": "hoodwink"
+   },
+   "hero": "hoodwink"
+  },
+  {
+   "id": "hero_armor.luna",
+   "category": "heroes",
+   "subtype": "hero_armor",
+   "question": "Сколько брони у героя Luna на 1 уровне без предметов (суммарное значение, как в интерфейсе, с учётом ловкости)?",
+   "answer": 6.0,
+   "answer_type": "number",
+   "tolerance": 0.2,
+   "source": "datafeed heroes armor + agi/6",
+   "ref": {
+    "kind": "hero_armor",
+    "hero": "luna"
+   },
+   "hero": "luna"
+  },
+  {
+   "id": "hero_armor.phoenix",
+   "category": "heroes",
+   "subtype": "hero_armor",
+   "question": "Сколько брони у героя Phoenix на 1 уровне без предметов (суммарное значение, как в интерфейсе, с учётом ловкости)?",
+   "answer": 1.0,
+   "answer_type": "number",
+   "tolerance": 0.2,
+   "source": "datafeed heroes armor + agi/6",
+   "ref": {
+    "kind": "hero_armor",
+    "hero": "phoenix"
+   },
+   "hero": "phoenix"
+  },
+  {
+   "id": "hero_move_speed.windrunner",
+   "category": "heroes",
+   "subtype": "hero_move_speed",
+   "question": "Какова базовая скорость передвижения героя Windranger?",
+   "answer": 285,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed heroes movement_speed",
+   "ref": {
+    "kind": "hero_move_speed",
+    "hero": "windrunner"
+   },
+   "hero": "windrunner"
+  },
+  {
+   "id": "hero_move_speed.rubick",
+   "category": "heroes",
+   "subtype": "hero_move_speed",
+   "question": "Какова базовая скорость передвижения героя Rubick?",
+   "answer": 290,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed heroes movement_speed",
+   "ref": {
+    "kind": "hero_move_speed",
+    "hero": "rubick"
+   },
+   "hero": "rubick"
+  },
+  {
+   "id": "hero_move_speed.dark_willow",
+   "category": "heroes",
+   "subtype": "hero_move_speed",
+   "question": "Какова базовая скорость передвижения героя Dark Willow?",
+   "answer": 290,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed heroes movement_speed",
+   "ref": {
+    "kind": "hero_move_speed",
+    "hero": "dark_willow"
+   },
+   "hero": "dark_willow"
+  },
+  {
+   "id": "hero_move_speed.abyssal_underlord",
+   "category": "heroes",
+   "subtype": "hero_move_speed",
+   "question": "Какова базовая скорость передвижения героя Underlord?",
+   "answer": 290,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "datafeed heroes movement_speed",
+   "ref": {
+    "kind": "hero_move_speed",
+    "hero": "abyssal_underlord"
+   },
+   "hero": "abyssal_underlord"
+  },
+  {
+   "id": "talent_level.nyx_assassin",
+   "category": "talents",
+   "subtype": "talent_level",
+   "question": "В каком ряду талантов (10, 15, 20 или 25 уровень) у героя Nyx Assassin находится талант «+80 Agility»? Ответь числом: 10 — ряд 10 уровня; 15 — ряд 15 уровня; 20 — ряд 20 уровня; 25 — ряд 25 уровня.",
+   "answer": "25",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes talents",
+   "options": [
+    {
+     "key": "10",
+     "text": "ряд 10 уровня"
+    },
+    {
+     "key": "15",
+     "text": "ряд 15 уровня"
+    },
+    {
+     "key": "20",
+     "text": "ряд 20 уровня"
+    },
+    {
+     "key": "25",
+     "text": "ряд 25 уровня"
+    }
+   ],
+   "ref": {
+    "kind": "talent_level",
+    "hero": "nyx_assassin",
+    "talent": "special_bonus_agility_80"
+   },
+   "hero": "nyx_assassin"
+  },
+  {
+   "id": "talent_level.brewmaster",
+   "category": "talents",
+   "subtype": "talent_level",
+   "question": "В каком ряду талантов (10, 15, 20 или 25 уровень) у героя Brewmaster находится талант «+600 Brewlings Health»? Ответь числом: 10 — ряд 10 уровня; 15 — ряд 15 уровня; 20 — ряд 20 уровня; 25 — ряд 25 уровня.",
+   "answer": "15",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes talents",
+   "options": [
+    {
+     "key": "10",
+     "text": "ряд 10 уровня"
+    },
+    {
+     "key": "15",
+     "text": "ряд 15 уровня"
+    },
+    {
+     "key": "20",
+     "text": "ряд 20 уровня"
+    },
+    {
+     "key": "25",
+     "text": "ряд 25 уровня"
+    }
+   ],
+   "ref": {
+    "kind": "talent_level",
+    "hero": "brewmaster",
+    "talent": "special_bonus_unique_brewmaster"
+   },
+   "hero": "brewmaster"
+  },
+  {
+   "id": "talent_level.centaur",
+   "category": "talents",
+   "subtype": "talent_level",
+   "question": "В каком ряду талантов (10, 15, 20 или 25 уровень) у героя Centaur Warrunner находится талант «+30% Double Edge Strength Damage»? Ответь числом: 10 — ряд 10 уровня; 15 — ряд 15 уровня; 20 — ряд 20 уровня; 25 — ряд 25 уровня.",
+   "answer": "15",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes talents",
+   "options": [
+    {
+     "key": "10",
+     "text": "ряд 10 уровня"
+    },
+    {
+     "key": "15",
+     "text": "ряд 15 уровня"
+    },
+    {
+     "key": "20",
+     "text": "ряд 20 уровня"
+    },
+    {
+     "key": "25",
+     "text": "ряд 25 уровня"
+    }
+   ],
+   "ref": {
+    "kind": "talent_level",
+    "hero": "centaur",
+    "talent": "special_bonus_unique_centaur_4"
+   },
+   "hero": "centaur"
+  },
+  {
+   "id": "talent_level.tidehunter",
+   "category": "talents",
+   "subtype": "talent_level",
+   "question": "В каком ряду талантов (10, 15, 20 или 25 уровень) у героя Tidehunter находится талант «-15s Ravage Cooldown»? Ответь числом: 10 — ряд 10 уровня; 15 — ряд 15 уровня; 20 — ряд 20 уровня; 25 — ряд 25 уровня.",
+   "answer": "15",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes talents",
+   "options": [
+    {
+     "key": "10",
+     "text": "ряд 10 уровня"
+    },
+    {
+     "key": "15",
+     "text": "ряд 15 уровня"
+    },
+    {
+     "key": "20",
+     "text": "ряд 20 уровня"
+    },
+    {
+     "key": "25",
+     "text": "ряд 25 уровня"
+    }
+   ],
+   "ref": {
+    "kind": "talent_level",
+    "hero": "tidehunter",
+    "talent": "special_bonus_unique_tidehunter_ravage_cooldown"
+   },
+   "hero": "tidehunter"
+  },
+  {
+   "id": "talent_level.primal_beast",
+   "category": "talents",
+   "subtype": "talent_level",
+   "question": "В каком ряду талантов (10, 15, 20 или 25 уровень) у героя Primal Beast находится талант «+25% Magic Resistance During Trample»? Ответь числом: 10 — ряд 10 уровня; 15 — ряд 15 уровня; 20 — ряд 20 уровня; 25 — ряд 25 уровня.",
+   "answer": "10",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "datafeed heroes talents",
+   "options": [
+    {
+     "key": "10",
+     "text": "ряд 10 уровня"
+    },
+    {
+     "key": "15",
+     "text": "ряд 15 уровня"
+    },
+    {
+     "key": "20",
+     "text": "ряд 20 уровня"
+    },
+    {
+     "key": "25",
+     "text": "ряд 25 уровня"
+    }
+   ],
+   "ref": {
+    "kind": "talent_level",
+    "hero": "primal_beast",
+    "talent": "special_bonus_unique_primal_beast_trample_magic_resist"
+   },
+   "hero": "primal_beast"
+  },
+  {
+   "id": "talent_present.treant",
+   "category": "talents",
+   "subtype": "talent_present",
+   "question": "Есть ли у героя Treant Protector в ряду талантов 10 уровня вариант «+50 Base Damage»? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed heroes talents",
+   "ref": {
+    "kind": "talent_present",
+    "hero": "treant",
+    "level": 10,
+    "talent": "special_bonus_attack_base_damage_50"
+   },
+   "hero": "treant"
+  },
+  {
+   "id": "talent_present.lone_druid",
+   "category": "talents",
+   "subtype": "talent_present",
+   "question": "Есть ли у героя Lone Druid в ряду талантов 15 уровня вариант «+20 Entangle Root Damage Per Second»? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed heroes talents",
+   "ref": {
+    "kind": "talent_present",
+    "hero": "lone_druid",
+    "level": 15,
+    "talent": "special_bonus_unique_lone_druid_1"
+   },
+   "hero": "lone_druid"
+  },
+  {
+   "id": "talent_present.arc_warden",
+   "category": "talents",
+   "subtype": "talent_present",
+   "question": "Есть ли у героя Arc Warden в ряду талантов 15 уровня вариант «+20% Flux Slow»? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed heroes talents",
+   "ref": {
+    "kind": "talent_present",
+    "hero": "arc_warden",
+    "level": 15,
+    "talent": "special_bonus_unique_arc_warden_4"
+   },
+   "hero": "arc_warden"
+  },
+  {
+   "id": "talent_present.dark_willow",
+   "category": "talents",
+   "subtype": "talent_present",
+   "question": "Есть ли у героя Dark Willow в ряду талантов 10 уровня вариант «+12 Intelligence»? (да/нет)",
+   "answer": true,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed heroes talents",
+   "ref": {
+    "kind": "talent_present",
+    "hero": "dark_willow",
+    "level": 10,
+    "talent": "special_bonus_intelligence_12"
+   },
+   "hero": "dark_willow"
+  },
+  {
+   "id": "talent_present.phantom_lancer",
+   "category": "talents",
+   "subtype": "talent_present",
+   "question": "Есть ли у героя Phantom Lancer в ряду талантов 25 уровня вариант «+3% Juxtapose Illusion Trigger Chance»? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "datafeed heroes talents",
+   "ref": {
+    "kind": "talent_present",
+    "hero": "phantom_lancer",
+    "level": 25,
+    "talent": "special_bonus_unique_phantom_lancer_juxtapose_illusio_proc_chance"
+   },
+   "hero": "phantom_lancer"
+  },
+  {
+   "id": "mech.b_mana_per_int",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько максимальной маны даёт 1 единица интеллекта в патче 7.41f?",
+   "answer": 12,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 1. Атрибуты",
+   "file": "A",
+   "evidence": "**+12 к максимальной мане**",
+   "kw": [
+    "интеллект",
+    "мана"
+   ]
+  },
+  {
+   "id": "mech.b_hp_regen_str",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько регенерации здоровья (в единицах в секунду) даёт 1 единица силы?",
+   "answer": 0.1,
+   "answer_type": "number",
+   "tolerance": 0.005,
+   "source": "mechanics_a.md, 1. Атрибуты",
+   "file": "A",
+   "evidence": "**+0.1 к регенерации HP**",
+   "kw": [
+    "сила",
+    "регенерац"
+   ]
+  },
+  {
+   "id": "mech.b_base_hp",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько базового здоровья (до вклада силы) у всех героев в патче 7.41f?",
+   "answer": 120,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 1. Атрибуты",
+   "file": "A",
+   "evidence": "Базовое HP: **120** у всех 127 героев",
+   "kw": [
+    "базовое hp",
+    "120"
+   ]
+  },
+  {
+   "id": "mech.b_int_mr",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько процентов базового сопротивления магии даёт 1 единица интеллекта?",
+   "answer": 0.1,
+   "answer_type": "number",
+   "tolerance": 0.005,
+   "source": "mechanics_a.md, 1. Атрибуты",
+   "file": "A",
+   "evidence": "**+0.1% к базовому магическому сопротивлению**",
+   "kw": [
+    "интеллект",
+    "магическ"
+   ]
+  },
+  {
+   "id": "mech.b_armor_20",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Какое снижение физического урона в процентах даёт 20 брони по формуле патча 7.41f?",
+   "answer": 54.5,
+   "answer_type": "number",
+   "tolerance": 0.1,
+   "source": "mechanics_a.md, 2. Броня",
+   "file": "A",
+   "evidence": "20 → ×0.4545 (−54.5%)",
+   "kw": [
+    "броня",
+    "формула"
+   ]
+  },
+  {
+   "id": "mech.b_armor_neg",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Как меняется получаемый физический урон при −10 брони (в процентах, плюс — больше урона)?",
+   "answer": 37.5,
+   "answer_type": "number",
+   "tolerance": 0.1,
+   "source": "mechanics_a.md, 2. Броня",
+   "file": "A",
+   "evidence": "−10 → ×1.375 (+37.5%)",
+   "kw": [
+    "броня",
+    "отрицательная"
+   ]
+  },
+  {
+   "id": "mech.b_glimmer_cloak",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "У героя базовое сопротивление магии 25%, Cloak даёт 18%, Glimmer Cape даёт 20%. Каково итоговое сопротивление магии в процентах (источники перемножаются)?",
+   "answer": 50.8,
+   "answer_type": "number",
+   "tolerance": 0.1,
+   "source": "mechanics_a.md, 3. Магическое сопротивление",
+   "file": "A",
+   "evidence": "= 50.8%",
+   "kw": [
+    "cloak",
+    "glimmer",
+    "мультипликативно"
+   ]
+  },
+  {
+   "id": "mech.b_bkb_mr",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько процентов магического сопротивления даёт Debuff Immunity от Black King Bar в патче 7.41f?",
+   "answer": 60,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 3. Магическое сопротивление",
+   "file": "A",
+   "evidence": "BKB 60% (с 7.35c, было 50%)",
+   "kw": [
+    "bkb",
+    "магическ"
+   ]
+  },
+  {
+   "id": "mech.b_desolator",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "На сколько единиц Desolator снижает броню цели?",
+   "answer": 6,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 2. Броня",
+   "file": "A",
+   "evidence": "Desolator −6 на 7 с",
+   "kw": [
+    "desolator",
+    "броня"
+   ]
+  },
+  {
+   "id": "mech.b_aeon_hp",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "При каком проценте здоровья владельца срабатывает Combo Breaker у Aeon Disk (срабатывает, когда здоровье ниже этого значения)?",
+   "answer": 70,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 6. Диспелы",
+   "file": "A",
+   "evidence": "пассивно при HP < 70%",
+   "kw": [
+    "aeon disk",
+    "combo breaker"
+   ]
+  },
+  {
+   "id": "mech.b_aeon_sr",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько процентов сопротивления статусам даёт Combo Breaker у Aeon Disk на 2.5 с?",
+   "answer": 75,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 6. Диспелы",
+   "file": "A",
+   "evidence": "+75% сопротивления статусу на 2.5 с",
+   "kw": [
+    "aeon disk",
+    "сопротивления статус"
+   ]
+  },
+  {
+   "id": "mech.b_silver_break",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько секунд длится Break от Shadow Walk у Silver Edge?",
+   "answer": 5,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 7. Break",
+   "file": "A",
+   "evidence": "ломает пассивки на 5 с",
+   "kw": [
+    "silver edge",
+    "break"
+   ]
+  },
+  {
+   "id": "mech.b_break_items",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Отключает ли Break пассивные компоненты предметов (например, уклонение Butterfly)? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 7. Break",
+   "file": "A",
+   "evidence": "**Не отключает** пассивные компоненты предметов и талантов",
+   "kw": [
+    "break",
+    "butterfly",
+    "пассивн"
+   ]
+  },
+  {
+   "id": "mech.b_evasion_spells",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Может ли уклонение (evasion) заставить промахнуться заклинание? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 8. Уклонение",
+   "file": "A",
+   "evidence": "уклониться от заклинаний evasion нельзя",
+   "kw": [
+    "evasion",
+    "заклинан"
+   ]
+  },
+  {
+   "id": "mech.b_satanic_ls",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько процентов вампиризма (lifesteal) даёт Satanic в патче 7.41f?",
+   "answer": 25,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 10. Lifesteal",
+   "file": "A",
+   "evidence": "**Satanic 25%**",
+   "kw": [
+    "satanic",
+    "lifesteal"
+   ]
+  },
+  {
+   "id": "mech.b_bloodstone_sls",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько процентов spell lifesteal даёт Bloodstone в патче 7.41f?",
+   "answer": 20,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 10. Lifesteal",
+   "file": "A",
+   "evidence": "**Bloodstone 20%**",
+   "kw": [
+    "bloodstone",
+    "spell lifesteal"
+   ]
+  },
+  {
+   "id": "mech.b_frost_hr",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "На сколько процентов Orb of Frost снижает восстановление здоровья цели в патче 7.41f?",
+   "answer": 15,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 10. Lifesteal",
+   "file": "A",
+   "evidence": "**Orb of Frost** −15%",
+   "kw": [
+    "orb of frost",
+    "health restoration"
+   ]
+  },
+  {
+   "id": "mech.b_sange_hr",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько процентов Health Restoration даёт Sange в патче 7.41f?",
+   "answer": 12,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 10. Lifesteal",
+   "file": "A",
+   "evidence": "Sange **+12%**",
+   "kw": [
+    "sange",
+    "health restoration"
+   ]
+  },
+  {
+   "id": "mech.b_daedalus_crit",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Какой множитель критического удара (в процентах урона) у Daedalus?",
+   "answer": 225,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 11. Скорость атаки",
+   "file": "A",
+   "evidence": "**Daedalus** 30% на 225%",
+   "kw": [
+    "daedalus",
+    "крит"
+   ]
+  },
+  {
+   "id": "mech.b_basher_cd",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Каков внутренний кулдаун Bash у Skull Basher в секундах?",
+   "answer": 2.3,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "mechanics_a.md, 11. Скорость атаки",
+   "file": "A",
+   "evidence": "оглушение 1.2 с, КД 2.3 с",
+   "kw": [
+    "skull basher",
+    "bash"
+   ]
+  },
+  {
+   "id": "mech.b_abyssal_stun",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько секунд оглушает активная способность Overwhelm у Abyssal Blade?",
+   "answer": 1.6,
+   "answer_type": "number",
+   "tolerance": 0.05,
+   "source": "mechanics_a.md, 11. Скорость атаки",
+   "file": "A",
+   "evidence": "актив, стан 1.6 с",
+   "kw": [
+    "abyssal",
+    "overwhelm"
+   ]
+  },
+  {
+   "id": "mech.b_bfury_heroes",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Какую долю урона атаки (в процентах) наносит Cleave у Battle Fury по героям?",
+   "answer": 60,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 11. Скорость атаки",
+   "file": "A",
+   "evidence": "**60% урона** по героям, **40% по крипам**",
+   "kw": [
+    "battle fury",
+    "cleave"
+   ]
+  },
+  {
+   "id": "mech.b_shiva_as",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "На сколько единиц Freezing Aura у Shiva's Guard снижает скорость атаки врагов в патче 7.41f?",
+   "answer": 40,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 11. Скорость атаки",
+   "file": "A",
+   "evidence": "Freezing Aura: −40 к AS",
+   "kw": [
+    "shiva",
+    "freezing aura"
+   ]
+  },
+  {
+   "id": "mech.b_mom_armor",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "На сколько единиц Berserk у Mask of Madness снижает броню самого владельца в патче 7.41?",
+   "answer": 7,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 2. Броня",
+   "file": "A",
+   "evidence": "Mask of Madness снижает **собственную** броню на 7",
+   "kw": [
+    "mask of madness",
+    "броня"
+   ]
+  },
+  {
+   "id": "mech.b_abyssal_slow_res",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько процентов Slow Resistance даёт Abyssal Blade в патче 7.41f?",
+   "answer": 30,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_a.md, 9. Статус-сопротивление",
+   "file": "A",
+   "evidence": "**Abyssal Blade 30%**",
+   "kw": [
+    "abyssal",
+    "slow resistance"
+   ]
+  },
+  {
+   "id": "mech.b_manta_duration",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько секунд существуют иллюзии от Manta Style?",
+   "answer": 18,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_b.md, 1. Иллюзии",
+   "file": "B",
+   "evidence": "Manta Style: 2 иллюзии, 18 с",
+   "kw": [
+    "manta",
+    "иллюзии"
+   ]
+  },
+  {
+   "id": "mech.b_manta_melee",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Какую долю урона героя (в процентах) наносят иллюзии Manta Style у героя дальнего боя в патче 7.41f?",
+   "answer": 25,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_b.md, 1. Иллюзии",
+   "file": "B",
+   "evidence": "Ближний бой наносит 33%, дальний 25%",
+   "kw": [
+    "manta",
+    "иллюзии"
+   ]
+  },
+  {
+   "id": "mech.b_illusion_roshan",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Какую долю атакующего урона (в процентах) наносят иллюзии по Рошану?",
+   "answer": 20,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_b.md, 1. Иллюзии",
+   "file": "B",
+   "evidence": "иллюзии наносят 20% атакующего урона",
+   "kw": [
+    "иллюзии",
+    "рошан"
+   ]
+  },
+  {
+   "id": "mech.b_mekansm",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько здоровья восстанавливает актив Restore у Mekansm в патче 7.41f?",
+   "answer": 250,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_b.md, 2. Ауры",
+   "file": "B",
+   "evidence": "Restore 250 HP, кулдаун 50",
+   "kw": [
+    "mekansm",
+    "restore"
+   ]
+  },
+  {
+   "id": "mech.b_pipe_barrier",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько магического урона поглощает барьер Pipe of Insight в патче 7.41f?",
+   "answer": 425,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_b.md, 2. Ауры",
+   "file": "B",
+   "evidence": "Barrier поглощает 425 магического урона",
+   "kw": [
+    "pipe",
+    "barrier"
+   ]
+  },
+  {
+   "id": "mech.b_shiva_blast",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько магического урона наносит Arctic Blast у Shiva's Guard в патче 7.41f?",
+   "answer": 225,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_b.md, 2. Ауры",
+   "file": "B",
+   "evidence": "Arctic Blast 225 урона (7.41f)",
+   "kw": [
+    "shiva",
+    "arctic blast"
+   ]
+  },
+  {
+   "id": "mech.b_aegis",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько минут держится Aegis of the Immortal после получения (в обычном режиме)?",
+   "answer": 5,
+   "answer_type": "number",
+   "tolerance": 0,
+   "source": "mechanics_b.md, 10. Крипы и объекты карты",
+   "file": "B",
+   "evidence": "Aegis держится 5 минут",
+   "kw": [
+    "aegis"
+   ]
+  },
+  {
+   "id": "mech.b_blessing_roshan",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Выпадает ли Aghanim's Blessing с Рошана в патче 7.41f? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "mechanics_b.md, 6. Aghanim's Scepter и Shard",
+   "file": "B",
+   "evidence": "Roshan больше не выдаёт Aghanim's Blessing (убрано в 7.38)",
+   "kw": [
+    "roshan",
+    "blessing"
+   ]
+  },
+  {
+   "id": "mech.b_neutral_t2_cost",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Сколько Madstone нужно для крафта нейтрального предмета Tier 2 в патче 7.41f? Варианты: A — 6; B — 8; C — 10; D — 12.",
+   "answer": "C",
+   "answer_type": "choice",
+   "tolerance": 0,
+   "source": "mechanics_b.md, 7. Нейтральные предметы",
+   "file": "B",
+   "evidence": "Tier 2, 3, 4, 5 = по 10 Madstone",
+   "kw": [
+    "madstone",
+    "tier 2",
+    "крафт"
+   ],
+   "options": [
+    {
+     "key": "A",
+     "text": "6"
+    },
+    {
+     "key": "B",
+     "text": "8"
+    },
+    {
+     "key": "C",
+     "text": "10"
+    },
+    {
+     "key": "D",
+     "text": "12"
+    }
+   ]
+  },
+  {
+   "id": "mech.b_enchant_wise",
+   "category": "mechanics",
+   "subtype": "mechanics",
+   "question": "Существует ли зачарование Wise (Wise Enchantment) нейтральных предметов в патче 7.41f? (да/нет)",
+   "answer": false,
+   "answer_type": "yes_no",
+   "tolerance": 0,
+   "source": "mechanics_b.md, 7. Нейтральные предметы",
+   "file": "B",
+   "evidence": "Boundless, Vast, Wise убраны (7.41)",
+   "kw": [
+    "wise",
+    "зачарован"
+   ]
+  }
+ ]
+}

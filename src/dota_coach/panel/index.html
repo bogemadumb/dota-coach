@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дота-ассистент</title>
+<style>
+  :root {
+    --bg: #0e1116; --card: #161b22; --line: #262d36; --text: #e6edf3; --dim: #8b949e;
+    --accent: #e8b04a; --good: #4fbf73; --bad: #e5534b; --info: #58a6ff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.4 -apple-system, "SF Pro Text", system-ui, sans-serif; }
+  header { display: flex; align-items: baseline; gap: 24px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+  #clock { font: 600 44px/1 "SF Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  #phase, #daytime, #conn { color: var(--dim); }
+  #conn.on { color: var(--good); }
+  #controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 10px 20px; border-bottom: 1px solid var(--line); }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  button { font: inherit; font-size: 14px; color: var(--text); background: var(--card); border: 0; padding: 7px 14px; min-height: 36px; cursor: pointer; }
+  .seg button + button { border-left: 1px solid var(--line); }
+  button.on { background: var(--accent); color: #1a1405; font-weight: 600; }
+  button.act { border: 1px solid var(--line); border-radius: 8px; }
+  button.act:active { background: var(--line); }
+  #markinfo, #brainline { color: var(--dim); font-size: 13px; }
+  #brainline.err { color: var(--bad); }
+  #plan { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.5; max-height: 60vh; overflow-y: auto; }
+  #plan.dim { color: var(--dim); }
+  #plan-card { grid-column: 1 / -1; }
+  main { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; padding: 12px 20px; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; min-width: 0; }
+  h2 { margin: 0 0 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); font-weight: 600; }
+  .big { font-size: 26px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .row { display: flex; justify-content: space-between; gap: 8px; padding: 2px 0; }
+  .row span:last-child { font-variant-numeric: tabular-nums; }
+  .dead { color: var(--bad); }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { padding: 3px 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+  li:last-child { border-bottom: 0; }
+  .cd { color: var(--accent); }
+  #hints li { font-size: 17px; }
+  #hints .detail { display: block; color: var(--dim); font-size: 13px; }
+  #events li { color: var(--dim); font-size: 13px; }
+  .team { color: var(--dim); font-size: 12px; margin-top: 6px; }
+  #buy-card { grid-column: 1 / -1; }
+  #buyhead { color: var(--dim); font-size: 13px; margin-bottom: 6px; }
+  #buy li { display: grid; grid-template-columns: 1.6em 1fr; gap: 0 8px; padding: 6px 0; }
+  #buy .n { color: var(--dim); font-variant-numeric: tabular-nums; }
+  #buy .name { font-size: 16px; font-weight: 600; }
+  #buy .meta { color: var(--dim); font-size: 13px; }
+  #buy .now { color: var(--good); font-weight: 600; }
+  #buy .why { color: var(--dim); font-size: 13px; display: block; }
+  #buyexcl { color: var(--dim); font-size: 12px; margin-top: 6px; }
+  @media (max-width: 480px) { header { flex-wrap: wrap; gap: 8px 16px; padding: 12px 16px; } main { padding: 12px 16px; } #controls { padding: 10px 16px; } .seg { flex: 1 1 100%; } .seg button { flex: 1; padding: 9px 6px; } button.act { flex: 1 1 auto; } }
+</style>
+</head>
+<body>
+<header>
+  <div id="clock">--:--</div>
+  <div id="phase">нет игры</div>
+  <div id="daytime"></div>
+  <div id="conn">нет связи</div>
+</header>
+<div id="controls">
+  <div class="seg" id="mode">
+    <button data-v="quiet">Тихо</button><button data-v="normal">Обычно</button><button data-v="chatty">Болтливо</button>
+  </div>
+  <div class="seg" id="voice_style">
+    <button data-v="commands">Команды</button><button data-v="coach">Тренер</button>
+  </div>
+  <div class="seg" id="role">
+    <button data-v="auto">Роль: авто</button><button data-v="core">Кор</button><button data-v="support">Саппорт</button>
+  </div>
+  <button class="act" id="voice_enabled">Голос</button>
+  <button class="act" id="rosh">Рошан убит</button>
+  <button class="act" id="brain_enabled">Claude</button>
+  <button class="act" id="ask">Совет сейчас</button>
+  <span id="markinfo"></span>
+  <span id="brainline"></span>
+</div>
+<main>
+  <section id="plan-card"><h2>План на матч</h2><div id="plan" class="dim">появится после пиков</div></section>
+  <section id="buy-card"><h2>Покупки</h2><div id="buyhead">появятся в матче</div><ul id="buy"></ul><div id="buyexcl"></div></section>
+  <section id="hints-card"><h2>Подсказки</h2><ul id="hints"><li class="dim">пока тихо</li></ul></section>
+  <section>
+    <h2>Герой</h2>
+    <div class="big" id="hero">—</div>
+    <div class="row"><span>Уровень</span><span id="level">—</span></div>
+    <div class="row"><span>Статус</span><span id="alive">—</span></div>
+    <div class="row"><span>K / D / A</span><span id="kda">—</span></div>
+    <div class="row"><span>Добито / не отдано</span><span id="lh">—</span></div>
+  </section>
+  <section>
+    <h2>Золото</h2>
+    <div class="big" id="gold">—</div>
+    <div class="row"><span>Надёжное / обычное</span><span id="goldsplit">—</span></div>
+    <div class="row"><span>GPM / XPM</span><span id="gpm">—</span></div>
+    <div class="row"><span>Выкуп</span><span id="buyback">—</span></div>
+  </section>
+  <section><h2>Предметы</h2><ul id="items"><li>—</li></ul></section>
+  <section><h2>Способности</h2><ul id="abilities"><li>—</li></ul></section>
+  <section><h2>Драфт</h2><div id="draft">—</div></section>
+  <section><h2>События</h2><ul id="events"></ul></section>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const PHASES = { loading: "загрузка", draft: "пики", strategy: "стратегия", pregame: "до старта", game: "игра", post: "конец", unknown: "нет игры" };
+const EVENTS = {
+  match_started: e => "новый матч",
+  phase_changed: e => `фаза: ${PHASES[e.data.new] || e.data.new}`,
+  hero_died: e => `смерть, возрождение через ${e.data.respawn_seconds} с`,
+  hero_respawned: e => "возрождение",
+  level_up: e => `уровень ${e.data.level}`,
+  item_added: e => `+ ${pretty(e.data.item)}`,
+  item_removed: e => `− ${pretty(e.data.item)}`,
+  hero_picked: e => `пик ${e.data.team === "radiant" ? "Radiant" : "Dire"}: ${e.data.hero}`,
+  hero_banned: e => `бан: ${e.data.hero}`,
+  game_event: e => `событие: ${e.data.type}`,
+};
+const pretty = s => (s || "").replace(/^item_/, "").replace(/_/g, " ");
+const fmtClock = c => {
+  if (c === null || c === undefined) return "--:--";
+  const sign = c < 0 ? "−" : "", a = Math.abs(c);
+  return `${sign}${Math.floor(a / 60)}:${String(a % 60).padStart(2, "0")}`;
+};
+const li = (html, cls) => { const el = document.createElement("li"); el.innerHTML = html; if (cls) el.className = cls; return el; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function render(s) {
+  if (!s) return;
+  $("clock").textContent = fmtClock(s.clock);
+  $("phase").textContent = (PHASES[s.phase] || s.phase) + (s.paused ? " · пауза" : "");
+  $("daytime").textContent = s.daytime === null ? "" : (s.daytime ? "день" : "ночь");
+  $("hero").textContent = s.hero || "—";
+  $("level").textContent = s.level || "—";
+  $("alive").textContent = s.alive ? "жив" : `мёртв, ${s.respawn_seconds} с`;
+  $("alive").className = s.alive ? "" : "dead";
+  $("kda").textContent = `${s.kills} / ${s.deaths} / ${s.assists}`;
+  $("lh").textContent = `${s.last_hits} / ${s.denies}`;
+  $("gold").textContent = s.gold;
+  $("goldsplit").textContent = `${s.gold_reliable} / ${s.gold_unreliable}`;
+  $("gpm").textContent = `${s.gpm} / ${s.xpm}`;
+  $("buyback").textContent = s.buyback_cooldown > 0 ? `откат ${s.buyback_cooldown} с` : s.buyback_cost;
+  const items = $("items"); items.replaceChildren();
+  const all = [...s.inventory, ...s.backpack.map(i => ({ ...i, tag: "рюкзак" })), ...s.stash.map(i => ({ ...i, tag: "тайник" }))];
+  if (s.neutral) all.push({ ...s.neutral, tag: "нейтралка" });
+  if (!all.length) items.append(li("—"));
+  for (const i of all) {
+    const extra = [i.tag, i.charges ? `×${i.charges}` : "", i.cooldown > 0 ? `<span class="cd">${Math.ceil(i.cooldown)} с</span>` : ""].filter(Boolean).join(" ");
+    items.append(li(`${esc(pretty(i.name))} <span style="color:var(--dim)">${extra}</span>`));
+  }
+  const ab = $("abilities"); ab.replaceChildren();
+  for (const a of s.abilities) {
+    if (a.name.startsWith("special_bonus") || a.name.includes("empty")) continue;
+    const cd = a.cooldown > 0 ? `<span class="cd">${Math.ceil(a.cooldown)} с</span>` : (a.level ? "готово" : "");
+    ab.append(li(`<div class="row"><span>${esc(a.name)} · ${a.level}</span><span>${cd}</span></div>`));
+  }
+  if (!ab.children.length) ab.append(li("—"));
+  if (s.draft) {
+    const d = s.draft;
+    $("draft").innerHTML = ["radiant", "dire"].map(t =>
+      `<div class="team">${t === "radiant" ? "Radiant" : "Dire"}${s.team === t ? " (мы)" : ""}</div>` +
+      `<div>${d.picks[t].map(esc).join(", ") || "—"}</div>` +
+      (d.bans[t].length ? `<div class="team">баны: ${d.bans[t].map(esc).join(", ")}</div>` : "")
+    ).join("");
+  }
+}
+
+function setPlan(text) {
+  const el = $("plan");
+  el.textContent = text || "появится после пиков";
+  el.className = text ? "" : "dim";
+}
+
+function setItems(a) {
+  if (!a) return;
+  const list = $("buy"); list.replaceChildren();
+  const roleName = a.role === "core" ? "кор" : "саппорт";
+  $("buyhead").textContent = a.candidates && a.candidates.length
+    ? `роль: ${roleName} (${a.role_note}) · золото ${a.gold} · стадия: ${a.phase}` : "кандидатов пока нет";
+  for (const [i, c] of (a.candidates || []).entries()) {
+    const now = c.affordable ? `<span class="now">можно купить сейчас</span> · ` : (c.gold_short ? `не хватает ${c.gold_short} · ` : "");
+    const part = c.next_part ? `${c.next_part.affordable ? "можно купить часть" : "ближайшая часть"}: ${esc(c.next_part.name)} ${c.next_part.cost}` : "";
+    list.append(li(`<span class="n">${i + 1}</span><span><span class="name">${esc(c.name)}</span> <span class="meta">${c.cost} · осталось ${c.cost_left} · ${now}${part}</span>` +
+      `<span class="why">${esc((c.reasons || []).join("; "))}</span></span>`));
+  }
+  $("buyexcl").textContent = (a.excluded || []).length ? `не берём: ${a.excluded.join("; ")}` : "";
+}
+
+function setBrain(b) {
+  if (!b) return;
+  const parts = [`вызовов ${b.calls}/${b.max_calls}`];
+  if (b.in_flight) parts.push("думает…");
+  else if (b.last_latency !== null && b.last_latency !== undefined) parts.push(`задержка ${b.last_latency.toFixed(1)} с`);
+  if (b.last_error) parts.push(`ошибка: ${b.last_error}`);
+  const el = $("brainline");
+  el.textContent = b.enabled ? parts.join(" · ") : "Claude выключен";
+  el.className = b.last_error ? "err" : "";
+}
+
+function addEvent(e) {
+  const fmt = EVENTS[e.kind];
+  if (!fmt) return;
+  const list = $("events");
+  list.prepend(li(`${fmtClock(e.clock)} — ${esc(fmt(e))}`));
+  while (list.children.length > 30) list.lastChild.remove();
+}
+
+function addHint(h) {
+  const list = $("hints");
+  if (list.firstChild && list.firstChild.classList.contains("dim")) list.replaceChildren();
+  list.prepend(li(`${esc(h.say)}${h.detail ? `<span class="detail">${esc(h.detail)}</span>` : ""}`));
+  while (list.children.length > 8) list.lastChild.remove();
+}
+
+let settings = {};
+function applySettings(st) {
+  if (!st) return;
+  settings = st;
+  for (const key of ["mode", "voice_style", "role"])
+    for (const b of $(key).children) b.classList.toggle("on", b.dataset.v === st[key]);
+  const v = $("voice_enabled");
+  v.classList.toggle("on", !!st.voice_enabled);
+  v.textContent = st.voice_enabled ? "Голос: вкл" : "Голос: выкл";
+  const b = $("brain_enabled");
+  b.classList.toggle("on", !!st.brain_enabled);
+  b.textContent = st.brain_enabled ? "Claude: вкл" : "Claude: выкл";
+}
+async function api(path, body) {
+  const r = await fetch(path, body === undefined ? {} : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  return { ok: r.ok, data: await r.json().catch(() => ({})) };
+}
+async function setSetting(patch) {
+  const r = await api("/api/settings", patch);
+  if (r.ok) applySettings(r.data);
+}
+for (const key of ["mode", "voice_style", "role"])
+  $(key).addEventListener("click", e => { if (e.target.dataset.v) setSetting({ [key]: e.target.dataset.v }); });
+$("voice_enabled").addEventListener("click", () => setSetting({ voice_enabled: !settings.voice_enabled }));
+$("brain_enabled").addEventListener("click", () => setSetting({ brain_enabled: !settings.brain_enabled }));
+$("ask").addEventListener("click", async () => {
+  const r = await api("/api/brain/ask", {});
+  if (!r.ok) { $("markinfo").textContent = r.data.error === "brain disabled" ? "Claude выключен" : "нет данных от игры"; clearTimeout(markTimer); markTimer = setTimeout(() => { $("markinfo").textContent = ""; }, 5000); }
+});
+let markTimer;
+$("rosh").addEventListener("click", async () => {
+  const r = await api("/api/mark/roshan_killed", {});
+  $("markinfo").textContent = r.ok ? `Рошан отмечен в ${fmtClock(r.data.clock)}` : "нет часов матча";
+  clearTimeout(markTimer);
+  markTimer = setTimeout(() => { $("markinfo").textContent = ""; }, 5000);
+});
+api("/api/settings").then(r => applySettings(r.data));
+
+function connect() {
+  const ws = new WebSocket(`ws://${location.host}/ws`);
+  ws.onopen = () => { $("conn").textContent = "связь есть"; $("conn").className = "on"; };
+  ws.onclose = () => { $("conn").textContent = "нет связи"; $("conn").className = ""; setTimeout(connect, 1000); };
+  ws.onmessage = m => {
+    const msg = JSON.parse(m.data);
+    if (msg.type === "hello") { render(msg.state); applySettings(msg.settings); setPlan(msg.plan); setBrain(msg.brain); setItems(msg.items); $("events").replaceChildren(); (msg.events || []).forEach(addEvent); }
+    else if (msg.type === "state") render(msg.state);
+    else if (msg.type === "event") addEvent(msg.event);
+    else if (msg.type === "hint") addHint(msg.hint);
+    else if (msg.type === "settings") applySettings(msg.settings);
+    else if (msg.type === "plan") setPlan(msg.plan);
+    else if (msg.type === "items") setItems(msg.items);
+    else if (msg.type === "brain_status") setBrain(msg.brain);
+  };
+}
+connect();
+</script>
+</body>
+</html>

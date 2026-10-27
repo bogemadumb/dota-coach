@@ -1,0 +1,6 @@
+Sniper: дальний бой, ловкость; Керри 3, Нюкер 1. Черты: физический урон, магический урон.
+Ульт Assassinate: НЕ пробивает БКБ.
+- Shrapnel: Расходует заряд, чтобы накрыть указанную область дождём…
+- Headshot: Стреляет точнее, отчего каждая его атака может нанести…
+Сборка 7000+ (поз. 2): Treads, Maelstrom, Dragon Lance, Mjollnir, Hurricane Pike.
+Против него: физический урон: Blade Mail, Assault, Butterfly; магический урон: BKB, Mage Slayer, Pipe.
